@@ -1,0 +1,149 @@
+SET SCHEMA 'dbo';
+ 
+/*CREATE DATABASE "PPDM"
+    WITH 
+    OWNER = odoo
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'C'
+    LC_CTYPE = 'English_United Kingdom.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;*/
+
+ 
+CREATE TABLE CookieCategories(
+	CookieCategoryId int NOT NULL,
+	CookieCategoryName Varchar(250) NOT NULL,
+ CONSTRAINT PK_CookieCategories PRIMARY KEY 
+(
+	CookieCategoryId 
+) 
+);
+/* SQLINES DEMO *** le [dbo].[PrivacyPolicies]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE PrivacyPolicies(
+	PrivacyPolicyId int GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	PrivacyPolicyData Char(10) NOT NULL,
+PRIMARY KEY 
+(
+	PrivacyPolicyId 
+) 
+);
+/* SQLINES DEMO *** le [dbo].[SiteCookies]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE SiteCookies(
+	SiteId int NOT NULL,
+	CookieCategoryId int NOT NULL,
+ CONSTRAINT UQ_Site_CookieCategory UNIQUE 
+(
+	SiteId 
+) 
+);
+/* SQLINES DEMO *** le [dbo].[SitePrivacyPolicies]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE SitePrivacyPolicies(
+	SiteId int NOT NULL,
+	PrivacyPolicyId int NOT NULL,
+ CONSTRAINT UQ_SitePrivacyPolicies UNIQUE 
+(
+	SiteId 
+) 
+);
+/* SQLINES DEMO *** le [dbo].[Sites]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE Sites(
+	SiteId int GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) NOT NULL,
+	SiteName Char(255) NOT NULL,
+PRIMARY KEY 
+(
+	SiteId 
+) 
+);
+/* SQLINES DEMO *** le [dbo].[SiteVendors]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE SiteVendors(
+	SiteId int NOT NULL,
+	VendorId int NOT NULL,
+	CookieCategoryId int NOT NULL
+);
+/* SQLINES DEMO *** le [dbo].[Users]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE Users(
+	UserId int NOT NULL,
+	UserName Varchar(250) NOT NULL,
+	UserEmail Varchar(250) NOT NULL
+);
+/* SQLINES DEMO *** le [dbo].[Vendors]    Script Date: 09/11/2022 23:26:52 ******/
+/* SET ANSI_NULLS ON */
+ 
+/* SET QUOTED_IDENTIFIER ON */
+ 
+-- SQLINES LICENSE FOR EVALUATION USE ONLY
+CREATE TABLE Vendors(
+	VendorId int NOT NULL,
+	VendorName Varchar(250) NOT NULL,
+ CONSTRAINT PK_Vendors PRIMARY KEY 
+(
+	VendorId 
+) 
+);
+ALTER TABLE SiteCookies  ADD  CONSTRAINT FK_SiteCookies_CookieCategories FOREIGN KEY(CookieCategoryId)
+REFERENCES CookieCategories (CookieCategoryId);
+ 
+ALTER TABLE SiteCookies VALIDATE CONSTRAINT FK_SiteCookies_CookieCategories;
+ 
+ALTER TABLE SiteCookies  ADD  CONSTRAINT FK_SiteCookies_Sites FOREIGN KEY(SiteId)
+REFERENCES Sites (SiteId);
+ 
+ALTER TABLE SiteCookies VALIDATE CONSTRAINT FK_SiteCookies_Sites;
+ 
+ALTER TABLE SitePrivacyPolicies  ADD  CONSTRAINT FK_SitePrivacyPolicies_PrivacyPolicies FOREIGN KEY(PrivacyPolicyId)
+REFERENCES PrivacyPolicies (PrivacyPolicyId);
+ 
+ALTER TABLE SitePrivacyPolicies VALIDATE CONSTRAINT FK_SitePrivacyPolicies_PrivacyPolicies;
+ 
+ALTER TABLE SitePrivacyPolicies  ADD  CONSTRAINT FK_SitePrivacyPolicies_Sites FOREIGN KEY(SiteId)
+REFERENCES Sites (SiteId);
+ 
+ALTER TABLE SitePrivacyPolicies VALIDATE CONSTRAINT FK_SitePrivacyPolicies_Sites;
+ 
+ALTER TABLE SiteVendors  ADD  CONSTRAINT FK_SiteVendors_CookieCategories FOREIGN KEY(CookieCategoryId)
+REFERENCES CookieCategories (CookieCategoryId);
+ 
+ALTER TABLE SiteVendors VALIDATE CONSTRAINT FK_SiteVendors_CookieCategories;
+ 
+ALTER TABLE SiteVendors  ADD  CONSTRAINT FK_SiteVendors_Sites FOREIGN KEY(SiteId)
+REFERENCES Sites (SiteId);
+ 
+ALTER TABLE SiteVendors VALIDATE CONSTRAINT FK_SiteVendors_Sites;
+ 
+ALTER TABLE SiteVendors  ADD  CONSTRAINT FK_SiteVendors_Vendors FOREIGN KEY(VendorId)
+REFERENCES Vendors (VendorId);
+ 
+ALTER TABLE SiteVendors VALIDATE CONSTRAINT FK_SiteVendors_Vendors;
+ 
+SET SCHEMA 'dbo';
+ 
