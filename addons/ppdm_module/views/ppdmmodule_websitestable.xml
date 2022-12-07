@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="ppdmmodule_websitestable_action"
+name="Websites Data"
+res_model="ppdmmodule.websitestable" />
+
+<menuitem
+ id="ppdmmodule_websitestable_menu"
+ name="PPDM Module" 
+ action="ppdmmodule_websitestable_action"
+ parent=""
+ sequence="5" />
+
+<record id ="ppdmmodule_websitestable_view_form" model="ir.ui.view">
+   <field name="name">Websites Data Form</field>
+   <field name="model">ppdmmodule.websitestable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="name"/>
+			<field name="desc"/>
+			
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="ppdmmodule_websitestable_view_tree" model="ir.ui.view">
+  <field name="name">Websites Data List</field>
+  <field name="model">ppdmmodule.websitestable</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="name"/>
+	  <field name="desc"/>
+			
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
