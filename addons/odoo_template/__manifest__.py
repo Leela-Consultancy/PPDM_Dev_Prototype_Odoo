@@ -1,6 +1,6 @@
 {
-	'name': 'Application Name',
-    'summary' : "Application Details",
+	'name': 'PPDM Module',
+    'summary' : "Privacy Policy Data Metrics",
 	'description' : """Application Details""",
 	'author' : "Leela Consultancy",
 	'license' : "AGPL-3",
@@ -10,7 +10,9 @@
 	'depends' : ['base'],
 	'data' : [
 		     'security/groups.xml',
-		     'views/odoomodule_odootable.xml',
+		     'views/ppdmmodule_websitestable.xml',
+			 'views/ppdmmodule_userstable.xml',
+			 'views/ppdmmodule_vendortable.xml',
 	         'security/ir.model.access.csv',
 	         ],	
 }

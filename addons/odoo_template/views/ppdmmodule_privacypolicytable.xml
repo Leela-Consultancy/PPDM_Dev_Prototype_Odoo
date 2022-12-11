@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="ppdmmodule_privacypolicytable_action"
+name="Privacy Policy Data"
+res_model="ppdmmodule.privacypolicytable" />
+
+<menuitem
+ id="ppdmmodule_privacypolicytable_menu"
+ name="PPDM Module"
+ action="ppdmmodule_privacypolicytable_action"
+ parent="ppdmmodule_websitestable_menu"
+ sequence="5" />
+
+<record id ="ppdmmodule_privacypolicytable_view_form" model="ir.ui.view">
+   <field name="name">Pprivacy Policy Data Form</field>
+   <field name="model">ppdmmodule.privacypolicytable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="name"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="ppdmmodule_privacypolicytable_view_tree" model="ir.ui.view">
+  <field name="name">Pprivacy Policy Data List</field>
+  <field name="model">ppdmmodule.privacypolicytable</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="name"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
