@@ -1,16 +1,15 @@
 *PPDM Roles*
 *-------------*
-*Meeting update* -  07/12/2022
+*Meeting update* -  12/12/2022
 *Hariharan* - Scrum Master - Project Lead
 *Mythreyi* - Architect - PPDM Database Architect & Web Site Design - *Sprint 6 - List Web Site Sections*
 *Rafi* - Developer & Automation Tester - PPDM Database Module & Website - *Sprint 3 - Develop Model under PPDM Module (Sites, PrivacyPolicies)*
-  to show the files required for module
+  To develop module in the name of rafi_module
 *Indika* - Developer - PPDM Database Module & Website -  *Sprint 3 - Develop Model under PPDM Module (Vendors, CookieCategories)*
-  to demonstrate how module is created
+  To develop module in the name of indika_module
 *Hidayathulla Khan* - Researcher - PPDM Database Content - *Sprint 4 - Collect Privacy Data*
-  to add site name in databse and show how test case is to be prepared
-*Nupur* - Tester - PPDM Module & Web Site - *Sprint 5 - Prepare Test Case as per Database structures*
-*Pratima* - Researcher - Web Site Content - *Sprint 6 - Web Site Content (As per Sections eg About Page)*
-  to check why her comits are not coming in git
+  To build excel as per the requirement specification, added URL, other field to be added
+*Nupur* - Tester - PPDM Module & Web Site - *Sprint 5 - To build test cases as per the requirement specification* (to add +ve and -ve cases)
+*Pratima* - Researcher - Web Site Content - *Sprint 6 - Web Site Content (explore web of trust)*
 *Sheenam* - Researcher - PPDM Database - *Sprint 4 - Collect Privacy Data* On Holiday
-*Sai* - 
+*Sai* - To join on 12th Dec

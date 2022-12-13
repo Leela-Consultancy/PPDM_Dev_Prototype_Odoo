@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acl_odootable,odoomodule.odootable_default,model_odoomodule_odootable,,1,0,0,0
-acl_odootable_odoorole,odoomodule.odootable_odoorole,model_odoomodule_odootable,group_odoorole,1,1,1,1
+acl_websitestable,ppdmmodule.websitestable_default,model_ppdmmodule_websitestable,,1,0,0,0
+acl_websitestable_ppdmadmin,ppdmmodule.websitestable_ppdmadmin,model_ppdmmodule_websitestable,group_ppdmadmin,1,1,1,1
+acl_userstable,ppdmmodule.userstable_default,model_ppdmmodule_userstable,,1,0,0,0
+acl_userstable_ppdmadmin,ppdmmodule.userstable_ppdmadmin,model_ppdmmodule_userstable,group_ppdmadmin,1,1,1,1
+acl_vendortable,ppdmmodule.vendortable_default,model_ppdmmodule_vendortable,,1,0,0,0
+acl_vendortable_ppdmadmin,ppdmmodule.vendortable_ppdmadmin,model_ppdmmodule_vendortable,group_ppdmadmin,1,1,1,1

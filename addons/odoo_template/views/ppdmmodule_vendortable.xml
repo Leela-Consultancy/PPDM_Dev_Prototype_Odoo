@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="ppdmmodule_vendortable_action"
+name="Vendors Data"
+res_model="ppdmmodule.vendortable" />
+
+<menuitem
+ id="ppdmmodule_vendortable_menu"
+ name="PPDM Module"
+ action="ppdmmodule_vendortable_action"
+ parent="ppdmmodule_websitestable_menu"
+ sequence="5" />
+
+<record id ="ppdmmodule_vendortable_view_form" model="ir.ui.view">
+   <field name="name">Vendors Data Form</field>
+   <field name="model">ppdmmodule.vendortable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="vendor_name"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="ppdmmodule_vendortable_view_tree" model="ir.ui.view">
+  <field name="name">Vendors Data List</field>
+  <field name="model">ppdmmodule.vendortable</field>
+  <field name="arch" type="xml">
+    <tree>
+            <field name="vendor_name"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
