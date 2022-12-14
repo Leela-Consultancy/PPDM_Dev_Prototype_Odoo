@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="indikamodule_websitestable_action"
+name="Websites Data"
+res_model="indikamodule.websitestable" />
+
+<menuitem
+ id="indikamodule_websitestable_menu"
+ name="INDIKA Module"
+ action="indikamodule_websitestable_action"
+ parent=""
+ sequence="5" />
+
+<record id ="indikamodule_websitestable_view_form" model="ir.ui.view">
+   <field name="name">Websites Data Form</field>
+   <field name="model">indikamodule.websitestable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="name"/>
+			<field name="desc"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="indikamodule_websitestable_view_tree" model="ir.ui.view">
+  <field name="name">Websites Data List</field>
+  <field name="model">indikamodule.websitestable</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="name"/>
+	  <field name="desc"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
