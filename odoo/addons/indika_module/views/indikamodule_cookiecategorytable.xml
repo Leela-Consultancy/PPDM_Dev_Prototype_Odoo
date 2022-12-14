@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="indikamodule_cookiecategorytable_action"
+name="Cookie Data Category"
+res_model="indikamodule.cookiecategorytable" />
+
+<menuitem
+ id="indikamodule_cookiecategorytable_menu"
+ name="Cookie Data Category"
+ action="indikamodule_cookiecategorytable_action"
+ parent="indikamodule_websitestable_menu"
+ sequence="5" />
+
+<record id ="indikamodule_cookiecategorytable_view_form" model="ir.ui.view">
+   <field name="name">Cookie Data Category  Form</field>
+   <field name="model">indikamodule.cookiecategorytable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="cookie_category_name"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="indikamodule_cookiecategorytable_view_tree" model="ir.ui.view">
+  <field name="name">Cookie Data Category List</field>
+  <field name="model">indikamodule.cookiecategorytable</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="cookie_category_name"/>
+
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
