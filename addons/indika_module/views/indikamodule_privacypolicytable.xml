@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="indikamodule_privacypolicytable_action"
+name="Privacy Policy Data"
+res_model="indikamodule.privacypolicytable" />
+
+<menuitem
+ id="indikamodule_privacypolicytable_menu"
+ name="Privacy Policy Data"
+ action="indikamodule_privacypolicytable_action"
+ parent="indikamodule_websitestable_menu"
+ sequence="5" />
+
+<record id ="indikamodule_privacypolicytable_view_form" model="ir.ui.view">
+   <field name="name">Privacy Policy Data Form</field>
+   <field name="model">indikamodule.privacypolicytable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+			<field name="privacy_name"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="indikamodule_privacypolicytable_view_tree" model="ir.ui.view">
+  <field name="name">Privacy Policy Data List</field>
+  <field name="model">indikamodule.privacypolicytable</field>
+  <field name="arch" type="xml">
+    <tree>
+            <field name="privacy_name"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>
