@@ -1,10 +1,11 @@
 *PPDM Roles*
 *-------------*
-*Meeting update* -  16/12/2022
+*Meeting update* -  19/12/2022
 *Rafi* - Developer & Automation Tester -Sprint 3 -   *Developing rafi_module, we have to build relationship*
-*Indika* - Developer - Sprint 3 -  *developed indika_module, we have to build relationship*
+*Indika* - Developer - Sprint 3 -  *developed indika_module, we have to build relationship, Hariharan to show how the view is to be configured*
 *Hidayathulla Khan* - Researcher - Sprint 4 - *To build excel as per the requirement specification, added URL, other field to be added*
-*Nupur* - Tester - Sprint 5 - *To build test cases as per the requirement specification (Hariharan to share sample test report), 16th did not join due to technical issue*
+*Nupur* - Tester - Sprint 5 - *To build test cases as per the requirement specification, Hariharan shared sample test report*
 *Pratima* - Tester - Sprint 5 - *Hariharan to allot testing work*
-*Sheenam* - Researcher - Sprint 4 - *Collect Privacy Data (On Holiday)
-*Sai* - To join on 12th Dec
+*Sheenam* - Researcher - Sprint 4 - *Collect Privacy Data (On Holiday till 1st Week Jan 2023)
+*Jyoti*-Testing-Joined on 19th Dec
+*Sai* - Functional Tester-He will work to build test specification and assign testing work from other testers
