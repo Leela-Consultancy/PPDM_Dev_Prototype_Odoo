@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="odoomodule_odootable_action"
+name="Application Table Name"
+res_model="odoomodule.odootable" />
+
+<menuitem
+ id="odoomodule_odootable_menu"
+ name="Application Name" 
+ action="odoomodule_odootable_action"
+ parent=""
+ sequence="5" />
+
+<record id ="odoomodule_odootable_view_form" model="ir.ui.view">
+   <field name="name">Application Table Name Form</field>
+   <field name="model">odoomodule.odootable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="name"/>	
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="odoomodule_odootable_view_tree" model="ir.ui.view">
+  <field name="name">Application Table Name List</field>
+  <field name="model">odoomodule.odootable</field>
+  <field name="arch" type="xml">
+    <tree>
+      <field name="name"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>

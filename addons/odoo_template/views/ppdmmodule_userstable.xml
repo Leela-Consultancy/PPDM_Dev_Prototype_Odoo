@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<act_window
+id="ppdmmodule_userstable_action"
+name="Users Data"
+res_model="ppdmmodule.userstable" />
+
+<menuitem
+ id="ppdmmodule_userstable_menu"
+ name="User data"
+ action="ppdmmodule_userstable_action"
+ parent="ppdmmodule_websitestable_menu"
+ sequence="5" />
+
+<record id ="ppdmmodule_userstable_view_form" model="ir.ui.view">
+   <field name="name">Users Data Form</field>
+   <field name="model">ppdmmodule.userstable</field>
+   <field name="arch" type="xml">
+         <form>
+ 	     <group>
+	        <field name="username"/>
+			<field name="email"/>
+	     </group>
+	 </form>
+   </field>
+</record>
+
+<record id="ppdmmodule_userstable_view_tree" model="ir.ui.view">
+  <field name="name">Users Data List</field>
+  <field name="model">ppdmmodule.userstable</field>
+  <field name="arch" type="xml">
+    <tree>
+            <field name="username"/>
+			<field name="email"/>
+    </tree>
+    </field>
+</record>	
+	
+
+</odoo>

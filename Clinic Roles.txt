@@ -1,0 +1,8 @@
+*Clinic Roles*
+*-------------*
+*Meeting update* -  17/12/2022
+1.Mr.Hari Krishna Chanda :Solutions Consultant - Shared specification (on leave from 15th Dec)
+2.Prudhvi:Senior Statistical Programmer - 
+3.Smitha: Senior Statistical Programmer - 
+4.Swathi: SAS Programmer 
+5.Tanveer: SAS Programmer (from Synergy) - Share how annotation is done in CRF and specification 

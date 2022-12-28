@@ -1,16 +1,11 @@
 *PPDM Roles*
 *-------------*
-*Meeting update* -  08/12/2022
-*Hariharan* - Scrum Master - Project Lead
-*Mythreyi* - Architect - PPDM Database Architect & Web Site Design - *Sprint 6 - List Web Site Sections*
-*Rafi* - Developer & Automation Tester - PPDM Database Module & Website - *Sprint 3 - Develop Model under PPDM Module (Sites, PrivacyPolicies)*
-  To look at the guidelines and start development
-*Indika* - Developer - PPDM Database Module & Website -  *Sprint 3 - Develop Model under PPDM Module (Vendors, CookieCategories)*
-  To look at the guidelines and start development
-*Hidayathulla Khan* - Researcher - PPDM Database Content - *Sprint 4 - Collect Privacy Data*
-  To build excel as per the requirement specification
-*Nupur* - Tester - PPDM Module & Web Site - *Sprint 5 - To build test cases as per the requirement specification*
-*Pratima* - Researcher - Web Site Content - *Sprint 6 - Web Site Content (As per Sections eg About Page)*
-  to check why her comits are not coming in git
-*Sheenam* - Researcher - PPDM Database - *Sprint 4 - Collect Privacy Data* On Holiday
-*Sai* - 
+*Meeting update* -  19/12/2022
+*Rafi* - Developer & Automation Tester -Sprint 3 -   *Developing rafi_module, we have to build relationship*
+*Indika* - Developer - Sprint 3 -  *developed indika_module, we have to build relationship, Hariharan to show how the view is to be configured*
+*Hidayathulla Khan* - Researcher - Sprint 4 - *To build excel as per the requirement specification, added URL, other field to be added*
+*Nupur* - Tester - Sprint 5 - *To build test cases as per the requirement specification, Hariharan shared sample test report*
+*Pratima* - Tester - Sprint 5 - *Hariharan to allot testing work*
+*Sheenam* - Researcher - Sprint 4 - *Collect Privacy Data (On Holiday till 1st Week Jan 2023)
+*Jyoti*-Testing-Joined on 19th Dec
+*Sai* - Functional Tester-He will work to build test specification and assign testing work from other testers
