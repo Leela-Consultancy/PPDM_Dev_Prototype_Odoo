@@ -1,8 +1,8 @@
 *Clinic MoM*
 *-------------*
-*Meeting update* -  29/12/2022 
+*Meeting update* -  30/12/2022 
 1.Mr.Hari Krishna Chanda :Solutions Consultant - Shared specification (on leave from 15th Dec)
-2.Prudhvi:Senior Statistical Programmer - Annual Leave
-3.Smitha: Senior Statistical Programmer - Need Guidelines from Hariharan
-4.Swathi: SAS Programmer - Annual Leave - Need Guidelines from Hariharan
-5.Tanveer: SAS Programmer (from Synergy) - (P) Laptop Issue, Share how annotation is done in CRF and specification,  
+2.Prudhvi:Senior Statistical Programmer - (P) - Reviewing SOPs of SAS from Internet
+3.Smitha: Senior Statistical Programmer - (A) - Need Guidelines from Hariharan
+4.Swathi: SAS Programmer - Annual Leave - (A) Need Guidelines from Hariharan
+5.Tanveer: SAS Programmer (from Synergy) - (A) Laptop Issue, Share how annotation is done in CRF and specification,  
