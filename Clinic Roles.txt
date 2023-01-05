@@ -1,8 +1,8 @@
 *Clinic MoM*
 *-------------*
-*Meeting update* -  04/01/2023
-1.Mr.Hari Krishna Chanda :Solutions Consultant - (A) - Shared specification (on leave from 15th Dec)
-2.Prudhvi:Senior Statistical Programmer - (P) - Reviewing SOPs of SAS from Internet
-3.Smitha: Senior Statistical Programmer - (P) - We will discuss e-CRF annotation, 
-4.Swathi: SAS Programmer - Annual Leave - (P) - We will discuss e-CRF annotation
-5.Tanveer: SAS Programmer (from Synergy) - (P) Laptop Issue??, To share old Excel ,  
+*Meeting update* -  05/01/2023
+1.Mr.Hari Krishna Chanda :Solutions Consultant - (Leave) - Shared specification (on leave from 15th Dec)
+2.Prudhvi:Senior Statistical Programmer - (P) - Hariharan to guide
+3.Smitha: Senior Statistical Programmer - (P) - Hariharan to guide 
+4.Swathi: SAS Programmer - (P) - Hariharan to guide
+5.Tanveer: SAS Programmer (from Synergy) - (P) Useful Excel shared, ask to explain  
