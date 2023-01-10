@@ -4,9 +4,9 @@
 	'description' : """Application Details""",
 	'author' : "Leela Consultancy",
 	'license' : "AGPL-3",
-	'website' : "www.isgec.com",
+	'website' : "www.leelaconsultancy.co.uk",
 	'category' : 'Uncategorized',
-	'version' : '16.0.1.0.0',
+	'version' : '16.0.2.0.0',
 	'depends' : ['base'],
 	'data' : [
 		     'security/groups.xml',
@@ -18,5 +18,6 @@
 			 'views/indikamodule_cookietypetable.xml',
 			 'views/indikamodule_cookiecategorytable.xml',
 	         'security/ir.model.access.csv',
+	         'views/templates.xml',
 	         ],	
 }
