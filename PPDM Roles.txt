@@ -1,11 +1,11 @@
 *PPDM MoM*
 *-------------*
-*Meeting update* -  09/01/2023 
+*Meeting update* -  10/01/2023 
 *Rafi* - Automation Tester -Sprint 5 - (A)  *Jira 6th Jan, Git 6th Jan*, help Jyoti Odoo, Building automation tests
 *Indika* - Developer - Sprint 7 - (P) *Jira 4th Jan, Git 30th Dec*, To Develop dynamic Website
-*Hidayathulla Khan* - Researcher - Sprint 4 - (P) *Jira 29th Dec, Git 28th Dec*, To gather L2, L3 data
+*Hidayathulla Khan* - Researcher - Sprint 4 - (A) *Jira 29th Dec, Git 28th Dec*, To gather L2, L3 data
 *Nupur* - Tester - Sprint 5 - (P) *Jira 6th Jan, Git 6th Jan*, To prepare actual test cases in Jira and perform the tests
-*Pratima* - Tester - Sprint 5 - (P) *Jira 4th Jan, Git 5th Jan*, Start building test cases
+*Pratima* - Tester - Sprint 5 - (A) *Jira 4th Jan, Git 5th Jan*, Start building test cases
 *Jyoti*-Tester- Sprint 5 - (P) *Jira Account Git Created* 
 
 Interns
