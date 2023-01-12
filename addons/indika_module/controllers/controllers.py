@@ -1,8 +1,16 @@
-# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 from odoo import http
 
-class INDIKAModule(http.Controller):
+class PPDMWebsite(http.Controller):
 
-    @http.route('/indika/', auth='public')
+    @http.route('/indika/website/', auth='public', website=True)
     def index(self, **kw):
-        return "Hello, world"
+
+        webistes = http.request.env['indikamodule.websitestable'].search([])
+        cookiedata = http.request.env['indikamodule.cookiedatatable'].search([])
+       # search webistes = http.request.env['indikamodule.websitestable'].search([])
+        return http.request.render('indika_module.website', {
+               'webistes' : webistes,
+               'cookiedata' : cookiedata,
+           })
+
