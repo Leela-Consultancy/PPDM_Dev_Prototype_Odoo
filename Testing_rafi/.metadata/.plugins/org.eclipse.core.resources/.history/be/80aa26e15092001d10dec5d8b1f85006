@@ -1,0 +1,10 @@
+package demotest;
+
+public class demotestapp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
