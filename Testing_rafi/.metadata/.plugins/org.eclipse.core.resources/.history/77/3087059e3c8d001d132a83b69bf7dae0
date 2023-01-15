@@ -1,0 +1,14 @@
+package rafiapplication;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class democlass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        ChromeDriver driver = new ChromeDriver();
+        driver.get("http://localhost:8069/web#action=441&model=ppdmmodule.websitestable&view_type=list&cids=1&menu_id=312");   
+	}
+
+}
+ 
