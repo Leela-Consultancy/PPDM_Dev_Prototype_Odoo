@@ -21,3 +21,13 @@ class PPDMWebsite(http.Controller):
         })
 
 
+    @http.route('/website/search', auth='public', website=True)
+    def website_search(self, search=''):
+        domain = []
+        if search:
+            domain = [('name', 'like', search)]
+        webiste = http.request.env['indikamodule.websitestable'].search(domain)
+        # search webistes = http.request.env['indikamodule.websitestable'].search([])
+        return http.request.render('indika_module.website_details', {
+            'webistes': webiste,
+        })

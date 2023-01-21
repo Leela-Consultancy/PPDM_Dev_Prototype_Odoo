@@ -7,6 +7,7 @@
                          style="background-image: none;">
                     <span class="s_parallax_bg oe_img_bg"
                           style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
+
                     <div class="container">
                         <div class="row s_nb_column_fixed o_grid_mode"
                              style="--grid-item-padding-y: 32px; --grid-item-padding-x: 15px;" data-row-count="100">
@@ -36,6 +37,9 @@
 
     <template id="website">
         <t t-call="website.layout">
+             <div id="wrap" class="oe_structure oe_empty">
+                <t t-call="indika_module.website_search" />
+            </div>
             <div id="wrap" class="oe_structure oe_empty">
                 <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_colored_level"
                          data-scroll-background-ratio="1" data-snippet="s_banner" data-name="Banner"
@@ -66,4 +70,5 @@
             </div>
         </t>
     </template>
+
 </odoo>
