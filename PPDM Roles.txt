@@ -1,11 +1,11 @@
 *PPDM MoM*
 *-------------*
-*Meeting update* -  19&20/01/2023 
-*Rafi* - Automation Tester -Sprint 5 - (P)  *Jira 6th Jan, Git 12th Jan*, Building automation tests
-*Indika* - Developer - Sprint 7 - (A) *Jira 17th Jan, Git 17th Dec*, Developing search functionality in Website
-*Nupur* - Tester - Sprint 5 - (P) *Jira 17th Jan, Git -Not required-*, Perform test of indika_module and share report
-*Pratima* - Tester - Sprint 5 - (Leave) *Jira 16th Jan, Git 17th Jan*, Perform test of indika_module and share report
-*Jyoti*-Tester- Sprint 5 - (P) *Jira Account Required* - Perform test of indika_module and share report
+*Meeting update* -  23/01/2023 
+*Rafi* - Automation Tester -Sprint 5 - (P)  *Jira 20th Jan, Git 12th Jan*, Building automation tests as per PPDM Specification
+*Indika* - Developer - Sprint 7 - (P) *Jira 20th Jan, Git 23th Dec*, Developing search functionality in Website
+*Nupur* - Tester - Sprint 5 - (P) *Jira 19th Jan, Git -Not required*, Perform test as per PPDM Specification and share report
+*Pratima* - Tester - Sprint 5 - (P) *Jira 16th Jan, Git -Not required*, Perform test as per PPDM Specification and share report
+*Jyoti*-Tester- Sprint 5 - (P) *Jira Account Required, Git 20th Jan* - Perform test as per PPDM Specification and share report
 
 Interns
 -------------
