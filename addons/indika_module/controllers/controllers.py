@@ -3,8 +3,11 @@ from odoo import http
 
 class PPDMWebsite(http.Controller):
     @http.route('/indika/website', auth='public', website=True)
-    def index(self, **kw):
-        webistes = http.request.env['indikamodule.websitestable'].search([])
+    def index(self, search='', **kw):
+        domain = []
+        if search:
+                domain = [('name','ilike',search)]        
+        webistes = http.request.env['indikamodule.websitestable'].search(domain)
         cookiedata = http.request.env['indikamodule.cookiedatatable'].search([])
         # search webistes = http.request.env['indikamodule.websitestable'].search([])
         return http.request.render('indika_module.website', {

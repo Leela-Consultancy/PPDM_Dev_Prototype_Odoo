@@ -1,0 +1,9 @@
+<odoo>
+    <template id="website_search">
+		<form action="/indika/website">
+			<t t-call="website.website_search_box">
+				<t t-set="action" t-value="'/indika/website'"/>
+			</t>
+		</form>	
+    </template>
+</odoo>
