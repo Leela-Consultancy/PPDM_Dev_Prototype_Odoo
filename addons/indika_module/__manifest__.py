@@ -21,5 +21,6 @@
 			 'views/indikamodule_cookiecategorytable.xml',
 	         'security/ir.model.access.csv',
 			 'views/templates.xml',
-			 'views/search.xml',	         ],	
+			 'views/search.xml',
+	],
 }

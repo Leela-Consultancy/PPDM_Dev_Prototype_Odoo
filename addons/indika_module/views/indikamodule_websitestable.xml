@@ -18,8 +18,9 @@ res_model="indikamodule.websitestable" />
    <field name="arch" type="xml">
          <form>
  	     <group>
-	        <field name="name"/>
-			<field name="desc"/>
+	         <field name="name"/>
+			 <field name="desc"/>
+             <field name="url"/>
 	     </group>
 	 </form>
    </field>
@@ -30,11 +31,10 @@ res_model="indikamodule.websitestable" />
   <field name="model">indikamodule.websitestable</field>
   <field name="arch" type="xml">
     <tree>
-      <field name="name"/>
-	  <field name="desc"/>
+        <field name="name"/>
+	    <field name="desc"/>
+        <field name="url"/>
     </tree>
     </field>
-</record>	
-	
-
+</record>
 </odoo>

@@ -19,6 +19,7 @@ res_model="indikamodule.vendortable" />
          <form>
  	     <group>
 	        <field name="vendor_name"/>
+	        <field name="vendor_url"/>
 	     </group>
 	 </form>
    </field>
@@ -30,6 +31,7 @@ res_model="indikamodule.vendortable" />
   <field name="arch" type="xml">
     <tree>
             <field name="vendor_name"/>
+            <field name="vendor_url"/>
     </tree>
     </field>
 </record>	
