@@ -1,7 +1,7 @@
 *PPDM MoM*
 *-------------*
-*Meeting update* -  23/01/2023 
-*Rafi* - Automation Tester -Sprint 5 - (P)  *Jira 20th Jan, Git 12th Jan*, Building automation tests as per PPDM Specification
+*Meeting update* -  24/01/2023 
+*Rafi* - Automation Tester -Sprint 5 - (P)  *Jira 20th Jan, Git not required*, Building automation tests as per PPDM Specification
 *Indika* - Developer - Sprint 7 - (P) *Jira 20th Jan, Git 23th Dec*, Developing search functionality in Website
 *Nupur* - Tester - Sprint 5 - (P) *Jira 19th Jan, Git -Not required*, Perform test as per PPDM Specification and share report
 *Pratima* - Tester - Sprint 5 - (P) *Jira 16th Jan, Git -Not required*, Perform test as per PPDM Specification and share report
