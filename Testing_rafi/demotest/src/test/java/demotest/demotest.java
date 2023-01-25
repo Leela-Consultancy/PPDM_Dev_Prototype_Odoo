@@ -39,7 +39,7 @@ public class demotest
         driver.findElement(By.xpath("//*[@id=\"wrapwrap\"]/main/div/form/div[3]/button")).click();
         		Thread.sleep(1000);
         driver.close();
-        driver.quit();
+        //driver.quit();
         test1.pass("closed the the browser");
         test1.pass("Test completed");
         extent.flush();

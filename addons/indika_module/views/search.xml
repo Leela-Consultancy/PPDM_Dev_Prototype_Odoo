@@ -4,6 +4,6 @@
 			<t t-call="website.website_search_box">
 				<t t-set="action" t-value="'/indika/website'"/>
 			</t>
-		</form>	
+		</form>
     </template>
 </odoo>

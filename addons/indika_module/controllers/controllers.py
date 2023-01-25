@@ -1,12 +1,13 @@
-# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 from odoo import http
 
 class PPDMWebsite(http.Controller):
+
     @http.route('/indika/website', auth='public', website=True)
     def index(self, search='', **kw):
         domain = []
         if search:
-                domain = [('name','ilike',search)]        
+            domain = [('name', 'ilike', search)]
         webistes = http.request.env['indikamodule.websitestable'].search(domain)
         cookiedata = http.request.env['indikamodule.cookiedatatable'].search([])
         # search webistes = http.request.env['indikamodule.websitestable'].search([])
@@ -22,5 +23,16 @@ class PPDMWebsite(http.Controller):
         return http.request.render('indika_module.website_details', {
             'webistes': website,
         })
+
+        @http.route('/website/search', auth='public', website=True)
+        def website_search(self, search=''):
+            domain = []
+            if search:
+                domain = [('name', 'like', search)]
+                webiste = http.request.env['indikamodule.websitestable'].search(domain)
+         # search webistes = http.request.env['indikamodule.websitestable'].search([])
+                return http.request.render('indika_module.website_details', {
+              'webistes': webiste,
+                        })
 
 
