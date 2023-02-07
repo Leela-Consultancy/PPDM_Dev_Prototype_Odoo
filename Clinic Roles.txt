@@ -1,8 +1,8 @@
 *Clinic MoM*
 *-------------*
-*Meeting update* -  03/02/2023
+*Meeting update* -  06/02/2023
 1.Mr.Hari Krishna Chanda :Solutions Consultant - Lead the team
 2.Prudhvi:Senior Statistical Programmer - (P) 
-3.Smitha: Senior Statistical Programmer - (A)  
-4.Swathi: SAS Programmer - (A) 
+3.Smitha: Senior Statistical Programmer - (P)  
+4.Swathi: SAS Programmer - (P) 
 5.Tanveer: SAS Programmer (from Synergy) - (A)   

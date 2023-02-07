@@ -1,11 +1,11 @@
 *PPDM MoM*
 *-------------*
-*Meeting update* -  03/02/2023 
-*Rafi* - Automation Tester -Sprint 5 - (P)  *Jira 02 Feb, Git not required*, Building automation tests as per PPDM Specification
+*Meeting update* -  06/02/2023 
+*Rafi* - Automation Tester -Sprint 5 - (A)  *Jira 02 Feb, Git not required*, Building automation tests as per PPDM Specification
 *Indika* - Developer - Sprint 7 - (P) *Jira 20th Jan, Git 23th Dec*, Diplaying related data from model
 *Nupur* - Tester - Sprint 5 - (P) *Jira 01 Feb, Git -Not required*, Executing test cases as per PPDM Specification and recording in Jira
 *Pratima* - Tester - Sprint 5 - (P) *Jira 02 Feb, Git -Not required*, Executing test cases as per PPDM Specification and recording in Jira
-*Jyoti*-Tester- Sprint 5 - (A) *Jira 01 Feb, Git -Not required* - Executing test cases as per PPDM Specification and recording in Jira
+*Jyoti*-Tester- Sprint 5 - (Leave) *Jira 01 Feb, Git -Not required* - Executing test cases as per PPDM Specification and recording in Jira
 *Surya* - Software Programmer - (P) *Git Projects*, Install Odoo, Git and develop analytics
 
 Interns
@@ -14,8 +14,6 @@ Interns
 *Treesa* - Software Engineer (P) - *Git Projects 02 Feb*, Developed Scaffolding for Chorem Ext, traversing page
 
 -------------
-*Hidayathulla Khan* - Researcher - Sprint 4 - (P) *Jira 29th Dec, Git 28th Dec*, To share more data with Indika
-*Sheenam* - Researcher - Sprint 4 - *Jira 25th Nov, Git None*, Collect Privacy Data (On Holiday till 1st Week Jan 2023)
 *Sai* - Functional Tester-(Leave) He will work to build test specification and assign testing work from other testers
 
 To discuss Test Case sheet 
