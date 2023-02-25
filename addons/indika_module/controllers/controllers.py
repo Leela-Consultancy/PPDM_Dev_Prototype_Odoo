@@ -7,11 +7,9 @@ class PPDMWebsite(http.Controller):
     def index(self, search='', **kw):
         domain = []
         domain = [('name', 'like', search)]
-        # webiste = http.request.env['indikamodule.websitestable'].search(domain)
-
-        vendor_id = self.env['indikamodule.vendortable'].search([('name', '=', search)])
-        website = self.env['indikamodule.websitestable'].search([('vendor_id', '=', vendor_id.id)])
-
+        webistes = http.request.env['indikamodule.websitestable'].search(domain)
+        vendor = http.request.env['indikamodule.vendortable'].search([('name', '=', search)])
+        # website = http.request.env['indikamodule.websitestable'].search([('name', '=', vendor.vendor_name)])
         # cache_category = http.request.env['indikamodule.cookiecategorytable'].search(
         #     [('cookie_category_description', 'in', webiste.mapped('CookieCategoryName'))])
         # exit()
@@ -21,13 +19,16 @@ class PPDMWebsite(http.Controller):
         # cookiedata = http.request.env['indikamodule.cookiedatatable'].search([])
         # # search webistes = http.request.env['indikamodule.websitestable'].search([])
         return http.request.render('indika_module.website', {
-            'webistes': website,
-            # 'cookiedata': cookiedata,
-        })  
+            'webistes': webistes,
+            'vendor': vendor,
+        })
 
     @http.route('/indika/website_details/<model("indikamodule.websitestable"):website>/', auth='public', website=True)
     def website_details(self, website):
-        webistes = http.request.env['indikamodule.websitestable'].search([])
+        webiste = http.request.env['indikamodule.websitestable'].search([])
+        # vendor_id = http.request.env['indikamodule.vendortable'].search([('id', '=', webistes.vendor_id)])
+        # webistes = http.request.env['indikamodule.websitestable'].search([])
+
         # search webistes = http.request.env['indikamodule.websitestable'].search([])
         return http.request.render('indika_module.website_details', {
             'webistes': website,

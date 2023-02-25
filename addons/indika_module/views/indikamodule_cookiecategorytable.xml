@@ -18,7 +18,7 @@ res_model="indikamodule.cookiecategorytable" />
    <field name="arch" type="xml">
          <form>
  	     <group>
-	         <field name="cookie_category_name"/>
+	         <field name="name"/>
 	         <field name="cookie_type_id"/>
              <field name="cookie_category_description"/>
 
@@ -32,7 +32,7 @@ res_model="indikamodule.cookiecategorytable" />
   <field name="model">indikamodule.cookiecategorytable</field>
   <field name="arch" type="xml">
     <tree>
-      <field name="cookie_category_name"/>
+      <field name="name"/>
       <field name="cookie_type_id"/>
       <field name="cookie_category_description"/>
 

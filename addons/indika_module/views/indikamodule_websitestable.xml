@@ -21,8 +21,7 @@ res_model="indikamodule.websitestable" />
 	         <field name="name"/>
 			 <field name="desc"/>
              <field name="url"/>
-             <field name="vendor_id"/>
-             <field name="cookie_type_id"/>
+
 	     </group>
 	 </form>
    </field>
@@ -36,8 +35,7 @@ res_model="indikamodule.websitestable" />
         <field name="name"/>
 	    <field name="desc"/>
         <field name="url"/>
-        <field name="vendor_id"/>
-        <field name="cookie_type_id"/>
+
     </tree>
     </field>
 </record>

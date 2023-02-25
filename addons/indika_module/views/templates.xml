@@ -58,7 +58,7 @@
                                     <t t-foreach="webistes" t-as="webiste">
                                         <li>
                                             <a t-attf-href="/indika/website_details/{{ slug(webiste)}}/">
-                                                <t t-esc="webiste.name"/>
+                                                <t t-esc="webiste.name"/>  | <t t-esc="webiste.url"/>
                                             </a>
                                         </li>
                                     </t>

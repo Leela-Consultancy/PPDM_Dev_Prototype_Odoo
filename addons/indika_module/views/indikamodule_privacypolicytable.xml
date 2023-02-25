@@ -18,7 +18,7 @@ res_model="indikamodule.privacypolicytable" />
    <field name="arch" type="xml">
          <form>
  	     <group>
-			<field name="privacy_name"/>
+			<field name="name"/>
 	     </group>
 	 </form>
    </field>
@@ -29,7 +29,7 @@ res_model="indikamodule.privacypolicytable" />
   <field name="model">indikamodule.privacypolicytable</field>
   <field name="arch" type="xml">
     <tree>
-            <field name="privacy_name"/>
+            <field name="name"/>
     </tree>
     </field>
 </record>	
