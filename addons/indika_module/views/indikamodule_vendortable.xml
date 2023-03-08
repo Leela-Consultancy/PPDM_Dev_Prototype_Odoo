@@ -6,11 +6,18 @@ name="Vendors Data"
 res_model="indikamodule.vendortable" />
 
 <menuitem
+ id="indikamodule_menu"
+ name="INDIKA Module"
+ action="indikamodule_websitestable_action"
+ parent=""
+ sequence="2" />
+
+<menuitem
  id="indikamodule_vendortable_menu"
- name="Vendors Data"
+ name="Vendors Sites"
  action="indikamodule_vendortable_action"
- parent="indikamodule_websitestable_menu"
- sequence="5" />
+ parent="indikamodule_menu"
+ sequence="2" />
 
 <record id ="indikamodule_vendortable_view_form" model="ir.ui.view">
    <field name="name">Vendors Data Form</field>

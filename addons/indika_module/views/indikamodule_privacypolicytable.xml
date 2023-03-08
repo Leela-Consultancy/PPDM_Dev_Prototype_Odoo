@@ -6,10 +6,17 @@ name="Privacy Policy Data"
 res_model="indikamodule.privacypolicytable" />
 
 <menuitem
- id="indikamodule_privacypolicytable_menu"
- name="Privacy Policy Data"
+ id="indikamodule_menu"
+ name="INDIKA Module"
  action="indikamodule_privacypolicytable_action"
- parent="indikamodule_websitestable_menu"
+ parent=""
+ sequence="5" />
+
+<menuitem
+ id="indikamodule_privacypolicytable_menu"
+ name="PPDM Mapping"
+ action="indikamodule_privacypolicytable_action"
+ parent="indikamodule_menu"
  sequence="5" />
 
 <record id ="indikamodule_privacypolicytable_view_form" model="ir.ui.view">
