@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<act_window
-id="indikamodule_websitestable_action"
-name="Websites Data"
-res_model="indikamodule.websitestable" />
+    <data>
+        <record id="indikamodule_websitestable_view_form" model="ir.ui.view">
+            <field name="name">Websites Data Form</field>
+            <field name="model">indikamodule.websitestable</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="desc"/>
+                        <field name="url"/>
+                        <field name="cookie_category_ids" mode="tree">
+                            <tree string="Cookie Categories">
+                                <field name="name"/>
+                                <field name="cookie_category_description"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
 
-<menuitem
- id="indikamodule_websitestable_menu"
- name="INDIKA Module"
- action="indikamodule_websitestable_action"
- parent=""
- sequence="5" />
+        <record id="indikamodule_websitestable_view_tree" model="ir.ui.view">
+            <field name="name">Websites Data List</field>
+            <field name="model">indikamodule.websitestable</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="desc"/>
+                    <field name="url"/>
+                </tree>
+            </field>
+        </record>
 
-<record id ="indikamodule_websitestable_view_form" model="ir.ui.view">
-   <field name="name">Websites Data Form</field>
-   <field name="model">indikamodule.websitestable</field>
-   <field name="arch" type="xml">
-         <form>
- 	     <group>
-	         <field name="name"/>
-			 <field name="desc"/>
-             <field name="url"/>
+        <record id="indikamodule_websitestable_action" model="ir.actions.act_window">
+            <field name="name">Websites Data</field>
+            <field name="res_model">indikamodule.websitestable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
-	     </group>
-	 </form>
-   </field>
-</record>
-
-<record id="indikamodule_websitestable_view_tree" model="ir.ui.view">
-  <field name="name">Websites Data List</field>
-  <field name="model">indikamodule.websitestable</field>
-  <field name="arch" type="xml">
-    <tree>
-        <field name="name"/>
-	    <field name="desc"/>
-        <field name="url"/>
-
-    </tree>
-    </field>
-</record>
+        <menuitem id="indikamodule_menu" name="INDIKA Module" sequence="1"/>
+        <menuitem id="indikamodule_websitestable_menu" name="Websites" action="indikamodule_websitestable_action"
+                  parent="indikamodule_menu" sequence="1"/>
+    </data>
 </odoo>

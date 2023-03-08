@@ -9,9 +9,10 @@ res_model="indikamodule.cookietypetable" />
  id="indikamodule_cookietypetable_menu"
  name="Cookie Type Data"
  action="indikamodule_cookietypetable_action"
- parent="indikamodule_websitestable_menu"
+ parent="indikamodule_cookiedatatable_menu"
  sequence="5" />
 
+<!-- parent="indikamodule_websitestable_menu"-->
 <record id ="indikamodule_cookietypetable_view_form" model="ir.ui.view">
    <field name="name">Cookie Type Data Form</field>
    <field name="model">indikamodule.cookietypetable</field>

@@ -7,3 +7,4 @@ class INDIKAModulePrivacypolicyTable(models.Model):
 	privacy_id = fields.Text('PrivacyID', required=True)
 	name = fields.Text('PrivacyPolicyData', required=True)
 
+
