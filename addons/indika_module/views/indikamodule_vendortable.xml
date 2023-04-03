@@ -1,51 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<act_window
-id="indikamodule_vendortable_action"
-name="Vendors Data"
-res_model="indikamodule.vendortable" />
+    <act_window
+        id="indikamodule_vendortable_action"
+        name="Vendors Data"
+        res_model="indikamodule.vendortable"
+    />
 
-<menuitem
- id="indikamodule_menu"
- name="INDIKA Module"
- action="indikamodule_websitestable_action"
- parent=""
- sequence="2" />
+    <menuitem
+        id="indikamodule_menu"
+        name="INDIKA Module"
+        sequence="2"
+    />
 
-<menuitem
- id="indikamodule_vendortable_menu"
- name="Vendors Sites"
- action="indikamodule_vendortable_action"
- parent="indikamodule_menu"
- sequence="2" />
+    <menuitem
+        id="indikamodule_vendortable_menu"
+        name="Vendors Sites"
+        parent="indikamodule_menu"
+        sequence="2"
+        action="indikamodule_vendortable_action"
+    />
 
-<record id ="indikamodule_vendortable_view_form" model="ir.ui.view">
-   <field name="name">Vendors Data Form</field>
-   <field name="model">indikamodule.vendortable</field>
-   <field name="arch" type="xml">
-         <form>
- 	     <group>
-	        <field name="name"/>
-	        <field name="vendor_url"/>
-	        <field name="cookie_type_id"/>
-	        <field name="website_id"/>
-	     </group>
-	 </form>
-   </field>
-</record>
+    <record id="indikamodule_vendortable_view_form" model="ir.ui.view">
+        <field name="name">Vendors Data Form</field>
+        <field name="model">indikamodule.vendortable</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="vendor_site_brief"/>
+                    <field name="vendor_url"/>
+                    <field name="cookie_ids"/>
+                </group>
+            </form>
+        </field>
+    </record>
 
-<record id="indikamodule_vendortable_view_tree" model="ir.ui.view">
-  <field name="name">Vendors Data List</field>
-  <field name="model">indikamodule.vendortable</field>
-  <field name="arch" type="xml">
-    <tree>
-            <field name="name"/>
-            <field name="vendor_url"/>
-            <field name="cookie_type_id"/>
-	        <field name="website_id"/>
-    </tree>
-    </field>
-</record>	
-	
-
+    <record id="indikamodule_vendortable_view_tree" model="ir.ui.view">
+        <field name="name">Vendors Data List</field>
+        <field name="model">indikamodule.vendortable</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="vendor_url"/>
+            </tree>
+        </field>
+    </record>
 </odoo>

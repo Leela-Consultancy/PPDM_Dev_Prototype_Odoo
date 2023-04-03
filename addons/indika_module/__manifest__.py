@@ -17,7 +17,6 @@
 			 'views/indikamodule_cookiedatatable.xml',
 			  'views/indikamodule_vendortable.xml',
 			 'views/indikamodule_privacypolicytable.xml',
-			 'views/indikamodule_cookietypetable.xml',
 			 'views/indikamodule_cookiecategorytable.xml',
 	         'security/ir.model.access.csv',
 			 'views/templates.xml',
