@@ -9,9 +9,10 @@ res_model="indikamodule.userstable" />
  id="indikamodule_userstable_menu"
  name="User data"
  action="indikamodule_userstable_action"
- parent="indikamodule_websitestable_menu"
+
  sequence="5" />
 
+<!--     parent="indikamodule_websitestable_menu"-->
 <record id ="indikamodule_userstable_view_form" model="ir.ui.view">
    <field name="name">Users Data Form</field>
    <field name="model">indikamodule.userstable</field>

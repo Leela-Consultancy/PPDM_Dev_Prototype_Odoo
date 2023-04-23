@@ -5,12 +5,14 @@ id="indikamodule_cookiecategorytable_action"
 name="Cookie Data Category"
 res_model="indikamodule.cookiecategorytable" />
 
-<menuitem
- id="indikamodule_cookiecategorytable_menu"
- name="Cookie Data Category"
- action="indikamodule_cookiecategorytable_action"
- parent="indikamodule_websitestable_menu"
- sequence="5" />
+<!--<menuitem-->
+<!-- id="indikamodule_cookiecategorytable_menu"-->
+<!-- name="Cookie Data Category"-->
+<!-- action="indikamodule_cookiecategorytable_action"-->
+
+<!-- sequence="5" />-->
+<!--&lt;!&ndash; parent="indikamodule_websitestable_menu"&ndash;&gt;-->
+
 
 <record id ="indikamodule_cookiecategorytable_view_form" model="ir.ui.view">
    <field name="name">Cookie Data Category  Form</field>
@@ -18,8 +20,10 @@ res_model="indikamodule.cookiecategorytable" />
    <field name="arch" type="xml">
          <form>
  	     <group>
-	        <field name="cookie_category_name"/>
-	        <field name="cookie_type_id"/>
+	         <field name="name"/>
+             <field name="cookie_category_description"/>
+<!--             <field name="website_id"/>-->
+
 	     </group>
 	 </form>
    </field>
@@ -30,8 +34,9 @@ res_model="indikamodule.cookiecategorytable" />
   <field name="model">indikamodule.cookiecategorytable</field>
   <field name="arch" type="xml">
     <tree>
-      <field name="cookie_category_name"/>
-      <field name="cookie_type_id"/>
+      <field name="name"/>
+      <field name="cookie_category_description"/>
+<!--      <field name="website_id"/>-->
 
     </tree>
     </field>

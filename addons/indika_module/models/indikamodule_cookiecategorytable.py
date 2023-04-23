@@ -3,8 +3,11 @@ from odoo import models, fields
 
 
 class INDIKAModuleCookiecategoryTable(models.Model):
-	_name = 'indikamodule.cookiecategorytable'
-	cookie_category_name = fields.Char('CookieCategoryName', required=True)
-	cookie_type_id = fields.Many2one('indikamodule.cookietypetable','CookieTypeId')
+    _name = 'indikamodule.cookiecategorytable'
+    name = fields.Char('CookieCategory', required=True)
+    cookie_category_description = fields.Text('Description', required=True)
+    website_id = fields.Many2one('indikamodule.websitestable', 'Website Data')
+
+
 
 

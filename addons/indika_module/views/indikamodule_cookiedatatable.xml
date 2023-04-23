@@ -2,24 +2,23 @@
 <odoo>
 <act_window
 id="indikamodule_cookiedatatable_action"
-name="Cookie Type Data"
+name="Cookie Data"
 res_model="indikamodule.cookiedatatable" />
 
 <menuitem
  id="indikamodule_cookiedatatable_menu"
- name="Cookie Type Data"
+ name="Cookie Data"
  action="indikamodule_cookiedatatable_action"
- parent="indikamodule_websitestable_menu"
  sequence="5" />
-
+<!-- parent="indikamodule_websitestable_menu"-->
 <record id ="indikamodule_cookiedatatable_view_form" model="ir.ui.view">
    <field name="name">Cookie Data Form</field>
    <field name="model">indikamodule.cookiedatatable</field>
    <field name="arch" type="xml">
          <form>
  	     <group>
-	        <field name="cookie_name"/>
-	        <field name="cookie_category_id"/>
+	         <field name="name"/>
+             <field name="cookie_type"/>
 	     </group>
 	 </form>
    </field>
@@ -30,8 +29,8 @@ res_model="indikamodule.cookiedatatable" />
   <field name="model">indikamodule.cookiedatatable</field>
   <field name="arch" type="xml">
     <tree>
-      <field name="cookie_name"/>
-      <field name="cookie_category_id"/>
+      <field name="name"/>
+      <field name="cookie_type"/>
     </tree>
     </field>
 </record>	

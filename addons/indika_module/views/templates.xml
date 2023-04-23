@@ -1,30 +1,73 @@
 <odoo>
-    <data>
-	    <template id="website">
-        <title>INDIKA Website</title>
-        <t t-foreach="teachers" t-as="teacher">
-            <p><t t-esc="teacher"/></p>
+    <template id="website_details">
+        <t t-call="website.layout">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_colored_level"
+                         data-scroll-background-ratio="1" data-snippet="s_banner" data-name="Banner"
+                         style="background-image: none;">
+                    <span class="s_parallax_bg oe_img_bg"
+                          style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
+                    <div class="container">
+                        <div class="row s_nb_column_fixed o_grid_mode"
+                             style="--grid-item-padding-y: 32px; --grid-item-padding-x: 15px;" data-row-count="100">
+                            <div class="jumbotron rounded o_cc o_cc1 o_colored_level o_grid_item g-col-lg-12 g-height-8 col-lg-12"
+                                 data-name="Box" style="grid-area: 1 / 1 / 9 / 7; z-index: 1;">
+                                <h1>
+                                    <font style="font-size: 25px;" class="o_default_snippet_text">
+                                        <h3 t-field="webistes.name"/>
+                                        - Websites Details
+                                    </font>
+                                </h1>
+                                <ul>
+                                    <t t-foreach="webistes" t-as="webiste">
+                                        <li>
+                                            <t t-esc="webiste.desc"/>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
         </t>
     </template>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
-    </data>
+
+    <template id="website">
+        <t t-call="website.layout">
+			<div class="container">
+				<t t-call="indika_module.website_search"/>
+			</div>
+
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_banner parallax s_parallax_is_fixed pt96 pb96 o_colored_level"
+                         data-scroll-background-ratio="1" data-snippet="s_banner" data-name="Banner"
+                         style="background-image: none;">
+                    <span class="s_parallax_bg oe_img_bg"
+                          style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
+                    <div class="container">
+                        <div class="row s_nb_column_fixed o_grid_mode"
+                             style="--grid-item-padding-y: 32px; --grid-item-padding-x: 15px;" data-row-count="10">
+                            <div class="jumbotron rounded o_cc o_cc1 o_colored_level o_grid_item g-col-lg-12 g-height-8 col-lg-12"
+                                 data-name="Box" style="grid-area: 1 / 1 / 9 / 7; z-index: 1;">
+                                <h1>
+                                    <font style="font-size: 62px;" class="o_default_snippet_text">Websites Data</font>
+                                </h1>
+                                <ul>
+                                    <t t-foreach="webistes" t-as="webiste">
+                                        <li>
+                                            <a t-attf-href="/indika/website_details/{{ slug(webiste)}}/">
+                                                <t t-esc="webiste.name"/>  | <t t-esc="webiste.url"/>
+                                            </a>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
 </odoo>
