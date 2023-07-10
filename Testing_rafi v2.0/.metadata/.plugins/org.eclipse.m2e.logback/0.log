@@ -1,0 +1,9 @@
+2023-07-05 13:41:48,565 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-07-05 13:42:59,115 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Extent_reports:Extent_reports:0.0.1-SNAPSHOT @ C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\pom.xml.
+2023-07-05 13:42:59,893 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Extent_reports/src/main/java
+2023-07-05 13:42:59,894 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Extent_reports/src/test/java
+2023-07-05 13:43:00,081 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 7 sec
+2023-07-05 13:43:03,626 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-07-05 13:43:03,628 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\src\main\resources
+2023-07-05 13:43:03,635 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-07-05 13:43:03,635 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\src\test\resources

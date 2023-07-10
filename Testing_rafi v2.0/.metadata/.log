@@ -1,0 +1,104 @@
+!SESSION 2023-07-05 13:41:12.050 -----------------------------------------------
+eclipse.buildId=4.27.0.20230309-1200
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2023-07-05 13:41:13.554
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-07-05 13:41:41.865
+!MESSAGE Logback config file: C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-07-05 13:41:44.069
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-07-05 13:41:44.069
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-07-05 13:41:44.069
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.edit.text.java.rename.element"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.rename"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-07-05 13:41:48.642
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.core 4 0 2023-07-05 13:45:38.821
+!MESSAGE An exception occurred during push on URI https://github.com/Leela-Consultancy/PPDM_Dev_Prototype_Odoo.git: Nothing to push.
+!STACK 0
+org.eclipse.jgit.errors.TransportException: Nothing to push.
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1525)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:242)
+	at org.eclipse.egit.ui.internal.push.SimpleConfigurePushDialog.dryRun(SimpleConfigurePushDialog.java:324)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-07-05 13:45:51.276
+!MESSAGE An exception occurred during push on URI https://github.com/Leela-Consultancy/PPDM_Dev_Prototype_Odoo.git: Nothing to push.
+!STACK 0
+org.eclipse.jgit.errors.TransportException: Nothing to push.
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1525)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:242)
+	at org.eclipse.egit.ui.internal.push.SimpleConfigurePushDialog.dryRun(SimpleConfigurePushDialog.java:324)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.testng.eclipse 4 4 2023-07-05 13:48:12.020
+!MESSAGE Error
+!STACK 0
+java.util.concurrent.CancellationException
+	at org.eclipse.jface.internal.text.codemining.CancellationExceptionMonitor.isCanceled(CancellationExceptionMonitor.java:33)
+	at org.testng.eclipse.ui.codemining.TestCodeMiningProvider.processElements(TestCodeMiningProvider.java:80)
+	at org.testng.eclipse.ui.codemining.TestCodeMiningProvider.processElements(TestCodeMiningProvider.java:89)
+	at org.testng.eclipse.ui.codemining.TestCodeMiningProvider.mineForTests(TestCodeMiningProvider.java:67)
+	at org.testng.eclipse.ui.codemining.TestCodeMiningProvider.lambda$0(TestCodeMiningProvider.java:40)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+
+!ENTRY org.testng.eclipse 1 0 2023-07-05 13:48:22.235
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\configuration\org.eclipse.osgi\929\0\.cp\lib\testng-remote.jar C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\target\test-classes C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\target\classes C:\Users\user\Downloads\extentreports-5.0.9 (1).jar C:\Users\user\Downloads\selenium-server-4.9.1.jar C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\org.testng_7.8.0.r202306071539.jar C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\com.beust.jcommander_1.82.0.jar C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar C:\Program Files\Eclipse 4.27\eclipse\plugins\org.yaml.snakeyaml_1.27.0.v20221112-0806.jar C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\org.webjars.jquery_3.6.1.jar C:\Users\user\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar C:\Users\user\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar C:\Users\user\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar C:\Users\user\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar C:\Users\user\.m2\repository\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar C:\Users\user\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar C:\Users\user\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar C:\Users\user\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar C:\Users\user\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar C:\Users\user\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar C:\Users\user\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar C:\Users\user\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-api\2.18.0\log4j-api-2.18.0.jar C:\Users\user\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar C:\Users\user\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar C:\Users\user\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar C:\Users\user\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar C:\Users\user\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 51073 -protocol json -d C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\test-output C:\Users\user\AppData\Local\Temp\testng-eclipse--2044197029\testng-customsuite.xml
+java -ea -classpath C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\configuration\org.eclipse.osgi\929\0\.cp\lib\testng-remote.jar:C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\target\test-classes:C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\target\classes:C:\Users\user\Downloads\extentreports-5.0.9 (1).jar:C:\Users\user\Downloads\selenium-server-4.9.1.jar:C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\org.testng_7.8.0.r202306071539.jar:C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\com.beust.jcommander_1.82.0.jar:C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar:C:\Program Files\Eclipse 4.27\eclipse\plugins\org.yaml.snakeyaml_1.27.0.v20221112-0806.jar:C:\Users\user\.eclipse\org.eclipse.platform_4.26.0_1315954615_win32_win32_x86_64\plugins\org.webjars.jquery_3.6.1.jar:C:\Users\user\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar:C:\Users\user\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar:C:\Users\user\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar:C:\Users\user\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar:C:\Users\user\.m2\repository\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar:C:\Users\user\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar:C:\Users\user\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar:C:\Users\user\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar:C:\Users\user\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar:C:\Users\user\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar:C:\Users\user\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar:C:\Users\user\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar:C:\Users\user\.m2\repository\org\apache\logging\log4j\log4j-api\2.18.0\log4j-api-2.18.0.jar:C:\Users\user\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar:C:\Users\user\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar:C:\Users\user\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar:C:\Users\user\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar:C:\Users\user\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar org.testng.remote.RemoteTestNG -serport 51073 -protocol json -d C:\Users\user\Documents\GitHub\PPDM_Dev_Prototype_Odoo\Testing_rafi v2.0\Extent_reports\test-output C:\Users\user\AppData\Local\Temp\testng-eclipse--2044197029\testng-customsuite.xml
