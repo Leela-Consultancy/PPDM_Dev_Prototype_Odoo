@@ -1,0 +1,1736 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Rafi_Report-v2</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jul 4, 2023 01:17:09 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Rafi</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">FunctionalTestCases</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">Windows</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Launch browser and website </p>
+            <p class="text-sm">
+              <span>13:17:21</span> / <span>00:00:00:191</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Launch browser and website </h5>
+<span class='badge badge-success'>07.04.2023 13:17:21</span>
+<span class='badge badge-danger'>07.04.2023 13:17:21</span>
+<span class='badge badge-default'>00:00:00:191</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473041907.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473041907.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:17:21</td>
+        <td>
+          capturing the page title
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:21</td>
+        <td>
+          page title is verified : titie captured :Home | My Website
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">login with username and password </p>
+            <p class="text-sm">
+              <span>13:17:21</span> / <span>00:00:11:240</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">login with username and password </h5>
+<span class='badge badge-success'>07.04.2023 13:17:21</span>
+<span class='badge badge-danger'>07.04.2023 13:17:33</span>
+<span class='badge badge-default'>00:00:11:240</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473043614.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473043614.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473045930.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473045930.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473052001.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473052001.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473052164.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473052164.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:17:21</td>
+        <td>
+          logging into the page
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:17:23</td>
+        <td>
+          Enter username and password
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:17:25</td>
+        <td>
+          clicking on login
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:33</td>
+        <td>
+          user logged into website
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:33</td>
+        <td>
+          user logged in verified
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Indkika Module Verification </p>
+            <p class="text-sm">
+              <span>13:17:33</span> / <span>00:00:05:075</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Indkika Module Verification </h5>
+<span class='badge badge-success'>07.04.2023 13:17:33</span>
+<span class='badge badge-danger'>07.04.2023 13:17:38</span>
+<span class='badge badge-default'>00:00:05:075</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473054481.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473054481.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473056736.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473056736.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473058170.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473058170.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:38</td>
+        <td>
+          user launched Indkia Module
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:38</td>
+        <td>
+          In Indkika Module, Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:38</td>
+        <td>
+          In Indkika Module, Vendor Sites Menu Tab is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:38</td>
+        <td>
+          In Indkika Module, PPDM Mapping Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Search bar Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:38</span> / <span>00:00:01:643</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Search bar Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:38</span>
+<span class='badge badge-danger'>07.04.2023 13:17:39</span>
+<span class='badge badge-default'>00:00:01:643</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473059063.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473059063.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473059897.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473059897.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:39</td>
+        <td>
+          Search bar in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Site Name Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:39</span> / <span>00:00:01:354</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Site Name Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:39</span>
+<span class='badge badge-danger'>07.04.2023 13:17:41</span>
+<span class='badge badge-default'>00:00:01:354</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473060583.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473060583.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473061255.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473061255.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:41</td>
+        <td>
+          Site Name in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Site Brief Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:41</span> / <span>00:00:01:358</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Site Brief Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:41</span>
+<span class='badge badge-danger'>07.04.2023 13:17:42</span>
+<span class='badge badge-default'>00:00:01:358</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473061943.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473061943.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473062617.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473062617.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:42</td>
+        <td>
+          Site Brief in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Site Url Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:42</span> / <span>00:00:01:274</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Site Url Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:42</span>
+<span class='badge badge-danger'>07.04.2023 13:17:43</span>
+<span class='badge badge-default'>00:00:01:274</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473063267.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473063267.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473063894.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473063894.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:43</td>
+        <td>
+          Site Url in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Websites Data Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:43</span> / <span>00:00:01:341</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Websites Data Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:43</span>
+<span class='badge badge-danger'>07.04.2023 13:17:45</span>
+<span class='badge badge-default'>00:00:01:341</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473064578.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473064578.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473065228.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473065228.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:45</td>
+        <td>
+          Websites Data in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Create Button Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:45</span> / <span>00:00:01:281</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Button Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:45</span>
+<span class='badge badge-danger'>07.04.2023 13:17:46</span>
+<span class='badge badge-default'>00:00:01:281</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473065890.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473065890.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473066522.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473066522.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>13:17:46</td>
+        <td>
+          Create button in websites Menu Tab is not displayed 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>13:17:46</td>
+        <td>
+          CREATE
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">radiobutton Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:46</span> / <span>00:00:08:144</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">radiobutton Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:46</span>
+<span class='badge badge-danger'>07.04.2023 13:17:54</span>
+<span class='badge badge-default'>00:00:08:144</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473067265.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473067265.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473067910.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473067910.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473069999.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473069999.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473072288.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473072288.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473073448.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473073448.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473074615.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473074615.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473074714.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473074714.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:47</td>
+        <td>
+          radio button in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:50</td>
+        <td>
+          Entered URL is a Valid URL format
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:52</td>
+        <td>
+          radio button is selected to perform delete options in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:54</td>
+        <td>
+          Deleted previous saved url's in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Create Button Verification in vendor sites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:54</span> / <span>00:00:01:849</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Create Button Verification in vendor sites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:54</span>
+<span class='badge badge-danger'>07.04.2023 13:17:56</span>
+<span class='badge badge-default'>00:00:01:849</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473075938.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473075938.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473076565.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473076565.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>13:17:55</td>
+        <td>
+          Create button screenshot in vendorsites
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>13:17:56</td>
+        <td>
+          Create button in vendor Sites Menu Tab is not displayed 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>13:17:56</td>
+        <td>
+          CREATE
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Search bar Verification in VendorSites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:56</span> / <span>00:00:01:359</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Search bar Verification in VendorSites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:56</span>
+<span class='badge badge-danger'>07.04.2023 13:17:57</span>
+<span class='badge badge-default'>00:00:01:359</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473077310.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473077310.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473077973.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473077973.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:57</td>
+        <td>
+          Search bar in Vendor Sites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">radiobutton Verification in VendorSites Menu tab </p>
+            <p class="text-sm">
+              <span>13:17:57</span> / <span>00:00:07:659</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">radiobutton Verification in VendorSites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:17:57</span>
+<span class='badge badge-danger'>07.04.2023 13:18:05</span>
+<span class='badge badge-default'>00:00:07:659</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473078664.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473078664.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473079339.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473079339.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473080944.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473080944.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473083204.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473083204.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473084370.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473084370.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473085526.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473085526.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473085634.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473085634.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:17:59</td>
+        <td>
+          radio button in Vendor sites Menu Tab is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:18:03</td>
+        <td>
+          radio button is selected to perform delete options in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:18:05</td>
+        <td>
+          Deleted previous saved url's in Vendor sites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="14"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Vendor Name Verification in Vendor sites Menu tab </p>
+            <p class="text-sm">
+              <span>13:18:05</span> / <span>00:00:01:340</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Vendor Name Verification in Vendor sites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:18:05</span>
+<span class='badge badge-danger'>07.04.2023 13:18:06</span>
+<span class='badge badge-default'>00:00:01:340</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473086309.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473086309.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473086975.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473086975.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:18:06</td>
+        <td>
+          Vendor Name in Wesbsites Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="15"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Vendor Site Url Verification in websites Menu tab </p>
+            <p class="text-sm">
+              <span>13:18:06</span> / <span>00:00:01:330</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Vendor Site Url Verification in websites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:18:06</span>
+<span class='badge badge-danger'>07.04.2023 13:18:08</span>
+<span class='badge badge-default'>00:00:01:330</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473087652.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473087652.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473088307.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473088307.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:18:08</td>
+        <td>
+          Vendor Site Url in Vendors Site Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="16"
+          author="Rafi"
+          tag="FunctionalTestCases"
+          device="Windows">
+          <div class="test-detail">
+            <p class="name">Vendors Data Verification in VendorSites Menu tab </p>
+            <p class="text-sm">
+              <span>13:18:08</span> / <span>00:00:01:288</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Vendors Data Verification in VendorSites Menu tab </h5>
+<span class='badge badge-success'>07.04.2023 13:18:08</span>
+<span class='badge badge-danger'>07.04.2023 13:18:09</span>
+<span class='badge badge-default'>00:00:01:288</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Rafi</span>
+<span class="badge badge-pill badge-default">FunctionalTestCases</span>
+<span class="badge badge-pill badge-default">Windows</span></div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473088966.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473088966.png">
+    
+    </div></div>
+    <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473089595.png' src="C:\Users\user\Desktop\pp\Extent_reports\src\..\images\screenshot1688473089595.png">
+    
+    </div></div>
+<div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>13:18:09</td>
+        <td>
+          Vendors Data(name Text) in Vendors Site  Menu Tab is displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>14</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">FunctionalTestCases</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>FunctionalTestCases</h4>
+<span status="pass" class='badge log pass-bg'>14 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Launch browser and website </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>login with username and password </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Indkika Module Verification </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Search bar Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Site Name Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Site Brief Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:42 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>Site Url Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Websites Data Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:17:45 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Create Button Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>radiobutton Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:17:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Create Button Verification in vendor sites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Search bar Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>radiobutton Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:05 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Vendor Name Verification in Vendor sites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Vendor Site Url Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Vendors Data Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>14</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">Windows</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Windows</h4>
+<span status="pass" class='badge log pass-bg'>14 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Launch browser and website </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>login with username and password </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Indkika Module Verification </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Search bar Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Site Name Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Site Brief Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:42 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>Site Url Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Websites Data Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:17:45 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Create Button Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>radiobutton Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:17:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Create Button Verification in vendor sites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Search bar Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>radiobutton Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:05 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Vendor Name Verification in Vendor sites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Vendor Site Url Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Vendors Data Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>14</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">Rafi</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Rafi</h4>
+<span status="pass" class='badge log pass-bg'>14 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Launch browser and website </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:21 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>login with username and password </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:33 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Indkika Module Verification </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>Search bar Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:39 pm</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>Site Name Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:41 pm</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Site Brief Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:42 pm</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>Site Url Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:43 pm</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>Websites Data Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:17:45 pm</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>Create Button Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>radiobutton Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>13:17:54 pm</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>Create Button Verification in vendor sites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:56 pm</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Search bar Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:17:57 pm</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>radiobutton Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:05 pm</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>Vendor Name Verification in Vendor sites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:06 pm</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>Vendor Site Url Verification in websites Menu tab </a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>13:18:08 pm</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>Vendors Data Verification in VendorSites Menu tab </a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 4, 2023 01:17:09 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 4, 2023 01:18:09 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>14</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='87%'>
+<b>14</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='12%'><b>2</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='71%'><b>23</b> events passed</small></div>
+<div>
+<small data-tooltip='12%'><b>4</b> events failed,
+<b data-tooltip='%'>5</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Launch browser and website ":0.191,"login with username and password ":11.24,"Indkika Module Verification ":5.075,"Search bar Verification in websites Menu tab ":1.643,"Site Name Verification in websites Menu tab ":1.354,"Site Brief Verification in websites Menu tab ":1.358,"Site Url Verification in websites Menu tab ":1.274,"Websites Data Verification in websites Menu tab ":1.341,"Create Button Verification in websites Menu tab ":1.281,"radiobutton Verification in websites Menu tab ":8.144,"Create Button Verification in vendor sites Menu tab ":1.849,"Search bar Verification in VendorSites Menu tab ":1.359,"radiobutton Verification in VendorSites Menu tab ":7.659,"Vendor Name Verification in Vendor sites Menu tab ":1.34,"Vendor Site Url Verification in websites Menu tab ":1.33,"Vendors Data Verification in VendorSites Menu tab ":1.288
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Rafi</td>
+<td>14</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>87.5%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>FunctionalTestCases</td>
+<td>14</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>87.5%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>14</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>87.5%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 14,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 23,
+failEvents: 4,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 5
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
