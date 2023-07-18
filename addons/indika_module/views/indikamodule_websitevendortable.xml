@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record model="ir.ui.view" id="indikamodule_websitevendortable_view">
+            <field name="name">Website-Vendor Mapping</field>
+            <field name="model">indikamodule.websitevendortable</field>
+            <field name="arch" type="xml">
+                <form string="Website-Vendor Mapping">
+                    <sheet>
+                        <group>
+                            <field name="website_id"/>
+<!--                            <field name="vendor_id"/>-->
+                            <field name="cookie_category_ids" mode="tree">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="cookie_category_description"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="indikamodule_websitevendortable_action" model="ir.actions.act_window">
+            <field name="name">Website-Vendor Mapping</field>
+            <field name="res_model">indikamodule.websitevendortable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+          <menuitem id="indikamodule_menu" name="INDIKA Module" sequence="1"/>
+    <menuitem
+        id="indikamodule_websitevendortable_menu"
+        name="PPDM Mapping"
+        parent="indikamodule_menu"
+        sequence="3"
+        action="indikamodule_websitevendortable_action"
+    />
+    </data>
+</odoo>
+

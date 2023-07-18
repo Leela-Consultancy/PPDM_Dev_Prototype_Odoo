@@ -6,10 +6,5 @@ class INDIKAModuleWebsitesTable(models.Model):
     name = fields.Char('Site Name', required=True)
     desc = fields.Char('Site Brief', required=True)
     url = fields.Char('Site Url', required=True)
-    cookie_category_ids = fields.One2many(
-        'indikamodule.cookiecategorytable', 'website_id',
-        string='Cookie Categories')
-
-
-
+    privacy = fields.Text('Privacy Policy', required=True)
 

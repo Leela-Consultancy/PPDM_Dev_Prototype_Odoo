@@ -9,7 +9,7 @@
     <menuitem
         id="indikamodule_menu"
         name="INDIKA Module"
-        sequence="2"
+        sequence="0"
     />
 
     <menuitem
@@ -19,30 +19,59 @@
         sequence="2"
         action="indikamodule_vendortable_action"
     />
+    <data>
+        <!-- Form View -->
+        <record id="indikamodule_vendortable_view_form" model="ir.ui.view">
+            <field name="name">Vendor Data Form</field>
+            <field name="model">indikamodule.vendortable</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <!-- Fields to display in the form -->
+                        <field name="website_id"/>
+                        <field name="vendor_site_brief"/>
+                        <field name="vendor_url"/>
+                    </group>
+                    <group>
+                        <!-- One2many field for displaying cookie data -->
+                        <field name="cookie_ids" mode="tree">
+                            <tree string="Cookie Data">
+                                <field name="name"/>
+                                <field name="cookie_type"/>
 
-    <record id="indikamodule_vendortable_view_form" model="ir.ui.view">
-        <field name="name">Vendors Data Form</field>
-        <field name="model">indikamodule.vendortable</field>
-        <field name="arch" type="xml">
-            <form>
-                <group>
-                    <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="indikamodule_vendortable_view_tree" model="ir.ui.view">
+            <field name="name">Vendor Data List</field>
+            <field name="model">indikamodule.vendortable</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Fields to display in the tree view -->
+                    <field name="website_id"/>
                     <field name="vendor_site_brief"/>
                     <field name="vendor_url"/>
-                    <field name="cookie_ids"/>
-                </group>
-            </form>
-        </field>
-    </record>
+                </tree>
+            </field>
+        </record>
 
-    <record id="indikamodule_vendortable_view_tree" model="ir.ui.view">
-        <field name="name">Vendors Data List</field>
-        <field name="model">indikamodule.vendortable</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="vendor_url"/>
-            </tree>
-        </field>
-    </record>
+        <!-- Action -->
+        <record id="indikamodule_vendortable_action" model="ir.actions.act_window">
+            <field name="name">Vendor Data</field>
+            <field name="res_model">indikamodule.vendortable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="indikamodule_menu" name="INDIKA Module" sequence="1"/>
+        <menuitem id="indikamodule_vendortable_menu"
+                  name="Vendors Sites" action="indikamodule_vendortable_action"
+                  parent="indikamodule_menu" sequence="2"/>
+    </data>
 </odoo>
+
