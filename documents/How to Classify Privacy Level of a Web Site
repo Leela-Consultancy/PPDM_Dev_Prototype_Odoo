@@ -1,0 +1,35 @@
+How to classify websites into the three distinct categories showing the level of Privacy Policy:
+
+Strict Privacy:
+
+Key Indicators:
+Explicit mention of GDPR, CCPA, or other significant privacy regulations and their compliance.
+Detailed breakdown of each cookie's purpose.
+No third-party tracking or advertising cookies without clear and explicit user consent.
+Short cookie lifespans unless necessary for core functionality.
+Easily accessible tools or settings for users to review and manage cookie preferences.
+Methodology:
+Automated keyword scanning: Use web scraping tools or APIs to fetch privacy policies and scan for keywords like "GDPR", "user consent", "manage cookies", etc.
+Manual review: Randomly select a subset of websites to manually review their policies to validate and refine your criteria.
+
+Moderate Privacy:
+
+Key Indicators:
+Mention of some privacy regulations, but without comprehensive details on compliance.
+Lists the types of cookies used, but not necessarily each individual cookie's purpose.
+Third-party cookies might be present, but there's some degree of user control or at least notification.
+Cookie lifespans may be longer, with some persistent cookies.
+Methodology:
+Automated keyword scanning: Look for generic terms like "cookies", "third-party", "lifespan", but the absence of more specific terms linked with strict privacy.
+Manual review: As with strict privacy, manually review a subset to ensure that the classification criteria are consistent.
+
+Loose Privacy:
+
+Key Indicators:
+Lack of specific mentions of privacy regulations.
+Vague descriptions of cookie usage without details.
+No clear tools or options for users to control cookie preferences.
+Long-lived or permanent cookies without clear justification.
+Methodology:
+Automated keyword scanning: Look for the absence of key privacy terms or the presence of vague language.
+Manual review: Essential for this category, as the lack of clear details can sometimes lead to misclassification. Manually verify a subset to ensure sites genuinely have lax privacy stances.
