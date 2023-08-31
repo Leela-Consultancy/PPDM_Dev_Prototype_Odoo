@@ -13,6 +13,13 @@
                         <field name="desc"/>
                         <field name="url"/>
                         <field name="privacy"/>
+                        <field name="strictly_necessary_cookies"/>
+                        <field name="performance_cookies"/>
+                        <field name="functionality_cookies"/>
+                        <field name="targeting_cookies"/>
+                        <field name="unknown_cookies"/>
+                        <field name="persistent_cookies"/>
+                        <field name="session_cookies"/>
                     </group>
                 </form>
             </field>

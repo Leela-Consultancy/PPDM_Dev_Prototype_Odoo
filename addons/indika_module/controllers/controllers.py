@@ -7,20 +7,13 @@ class PPDMWebsite(http.Controller):
     def index(self, search='', **kw):
         domain = []
         domain = [('name', 'like', search)]
-        webistes = http.request.env['indikamodule.websitestable'].search(domain)
-        vendor = http.request.env['indikamodule.vendortable'].search([('name', '=', search)])
-        # website = http.request.env['indikamodule.websitestable'].search([('name', '=', vendor.vendor_name)])
-        # cache_category = http.request.env['indikamodule.cookiecategorytable'].search(
-        #     [('cookie_category_description', 'in', webiste.mapped('CookieCategoryName'))])
-        # exit()
-        # if search:
-        #     domain = [('name', 'ilike', search)]
-        # webistes = http.request.env['indikamodule.websitestable'].search(domain)
-        # cookiedata = http.request.env['indikamodule.cookiedatatable'].search([])
-        # # search webistes = http.request.env['indikamodule.websitestable'].search([])
+        websites = http.request.env['indikamodule.websitestable'].search(domain, limit=1)
+        total_websites = len(websites)
+
         return http.request.render('indika_module.website', {
-            'webistes': webistes,
-            'vendor': vendor,
+            'websites': websites,
+            'total_websites':total_websites
+
         })
 
     @http.route('/indika/website_details/<model("indikamodule.websitestable"):website>/', auth='public', website=True)
