@@ -1,0 +1,5 @@
+ls
+conda env update
+conda activate base
+conda env update --file /path/to/environment.yml --name base
+
