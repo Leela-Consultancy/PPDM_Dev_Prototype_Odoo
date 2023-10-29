@@ -1,4 +1,40 @@
 <odoo>
+
+
+    <!-- Add the HTML content to your header template -->
+    <template id="your_header_template" inherit_id="website.layout">
+        <xpath expr="//header" position="inside">
+            <div class="o_menu_systray d-flex flex-shrink-0 ms-auto" role="menu">
+                <div data-index="8"></div>
+                <div class="o-dropdown dropdown o_debug_manager o-dropdown--no-caret">
+                    <button class="dropdown-toggle o-dropdown--narrow" tabindex="0" aria-expanded="false">
+                        <i class="fa fa-bug"></i>
+                    </button>
+                </div>
+
+
+                <div data-index="4"></div>
+                <div class="o_menu_systray_item o_new_content_container d-none d-md-block">
+                    <a href="#" data-hotkey="c" style="position: relative;">
+                        <span class="fa fa-plus me-2"></span>New
+                    </a>
+                </div>
+                <div data-index="1"></div>
+                <div class="o_edit_website_container d-none d-md-block">
+                    <a href="#" class="text-reset" data-hotkey="a" style="position: relative;">
+                        <span class="fa me-2 fa-pencil"></span>Edit
+                    </a>
+                </div>
+                <div data-index="0"></div>
+                <div>
+                    <button class="o_mobile_menu_toggle o-no-caret d-md-none border-0" title="Toggle menu" aria-label="Toggle menu">
+                        <i class="oi oi-panel-right"></i>
+                    </button>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
     <template id="website_details">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure oe_empty">
@@ -48,41 +84,12 @@
     <div class="inner-row">
 
         <div class="spacing">
-            <div class="breakdown-left-25">
-                <div class="total-cookies-graph website-results-cookies">
-                    <canvas id="total-cookies-chart" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
-                    <div class="inner">
-                        <span class="value">
-                             <t t-if="total_websites">
-                            <t t-esc="sum(websites.mapped('strictly_necessary_cookies')) +
-                            sum(websites.mapped('performance_cookies')) +
-                            sum(websites.mapped('targeting_cookies')) +
-                            sum(websites.mapped('unknown_cookies')) +
-                            sum(websites.mapped('persistent_cookies')) +
-                            sum(websites.mapped('session_cookies'))"/>
-                               </t>
-                               <t t-else="">
-                                    0 <!-- Or any default value you prefer -->
-                                </t>
-                        </span>
-                        <span class="title">total cookies</span>
-                    </div>
-                </div>
-                <div class="total-hosts-graph website-results-hosts">
-                    <canvas id="total-hosts-chart" width="400" height="400" style="width: 200px; height: 200px;"></canvas>
-                    <div class="inner">
-                        <span class="value">
-                             <t t-if="websites and websites[0].strictly_necessary_cookies">
-                                    <t t-esc="websites.strictly_necessary_cookies"/>
-                             </t>
-                         <t t-else=""> 0</t>
-                        </span>
-                        <span class="title">total hosts</span>
-                    </div>
-                </div>
-            </div>
             <div class="breakdown-middle-left-25">
                 <div class="website-results-cookies">
+                    <div class="website-category">
+                        <p> Website Detail </p>
+                    </div>
+
                     <div class="cookie-type-necessary">
                         <p>Strictly Necessary Cookies  <span class="value">
                              <t t-if="websites and websites[0].strictly_necessary_cookies">
@@ -146,38 +153,88 @@
                         <p>Unknown Hosts <span>0</span></p>
                     </div>
                 </div>
-                <div class="website-results-switch">
-                    <p><a href="" class="switch-link">Switch to <span class="switch-label">host</span> view</a></p>
-                </div>
+
             </div>
             <div class="clear-2-col"></div>
-            <div class="breakdown-middle-right-25">
-                <div class="cookie-type-targeting-big top">
-                    <p>Persistent Cookies</p>
-                    <h2>0</h2>
+           <div class="breakdown-middle-left-25">
+                <div class="website-results-cookies">
+                        <div class="website-category">
+                           <p>Generic Website Detail </p>
+                    </div>
+                    <div class="cookie-type-necessary">
+                        <p>Strictly Necessary Cookies  <span class="value">
+                             <t t-if="category_data and category_data[0].strictly_necessary_cookies">
+                                    <t t-esc="category_data.strictly_necessary_cookies"/>
+                             </t>
+                         <t t-else=""> 0</t>
+                        </span></p>
+                    </div>
+                    <div class="cookie-type-performance">
+                        <p>Performance Cookies <span class="value">
+                             <t t-if="category_data and category_data[0].performance_cookies">
+                                    <t t-esc="category_data.performance_cookies"/>
+                             </t>
+                         <t t-else=""> 0</t>
+                        </span></p>
+                    </div>
+                    <div class="cookie-type-functionality">
+                        <p>Functionality Cookies <span class="value">
+                             <t t-if="category_data and category_data[0].functionality_cookies">
+                                    <t t-esc="category_data.functionality_cookies"/>
+                             </t>
+                         <t t-else=""> 0</t>
+                        </span></p>
+                    </div>
+                    <div class="cookie-type-targeting">
+                        <p>Targeting Cookies <span class="value">
+                             <t t-if="category_data and category_data[0].targeting_cookies">
+                                    <t t-esc="category_data.targeting_cookies"/>
+                             </t>
+                         <t t-else=""> 0</t>
+                        </span></p>
+                    </div>
+                    <div class="cookie-type-unknown">
+                        <p>Unknown Cookies <span class="value">
+                             <t t-if="category_data and category_data[0].unknown_cookies">
+                                    <t t-esc="category_data.unknown_cookies"/>
+                             </t>
+                         <t t-else=""> 0</t>
+                        </span></p>
+                    </div>
                 </div>
-                <div class="cookie-type-targeting-big">
-                    <p>Session Cookies</p>
-                    <h2>0</h2>
+                <div class="website-results-hosts">
+                    <div class="cookie-type-necessary">
+                        <p>Strictly Necessary Hosts <span>0</span></p>
+                    </div>
+                    <div class="cookie-type-performance">
+                        <p>Performance Hosts <span class="value">
+                             <t t-if="websites and websites[0].unknown_cookies">
+                                    <t t-esc="websites.unknown_cookies"/>
+                             </t>
+                         <t t-else=""> 0</t>
+                        </span></p>
+                    </div>
+                    <div class="cookie-type-functionality">
+                        <p>Functionality Hosts <span>0</span></p>
+                    </div>
+                    <div class="cookie-type-targeting">
+                        <p>Targeting Hosts <span>0</span></p>
+                    </div>
+                    <div class="cookie-type-unknown">
+                        <p>Unknown Hosts <span>0</span></p>
+                    </div>
                 </div>
             </div>
-            <div class="breakdown-right-25">
-                <div class="cookie-type-unknown-big top">
-                    <p>First Party Cookies</p>
-                    <h2>0</h2>
-                </div>
-                <div class="cookie-type-unknown-big">
-                    <p>Third Party Cookies</p>
-                    <h2>0</h2>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-</div>
 
+
+       <div class="clear-2-col"></div>
+</div>
+   </div>
+      </div>
                 </section>
+
             </div>
+
         </t>
            <style>
                         html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
@@ -188,7 +245,15 @@
     font: inherit;
     vertical-align: baseline
 }
+               .first-left
+               {
+               width:50%;
+               }
 
+               .third-last
+               {
+               width:150%;
+               }
 article,aside,details,figcaption,figure,footer,hgroup,menu,nav,section {
     display: block
 }
@@ -931,11 +996,25 @@ ul.navbar-nav a.btn:hover {
     padding-top: 20px
 }
 
+.website-category {
+    width: 100%;
+    background-color: #fff;
+
+}
+
+
 .cookie-type-necessary {
     width: 100%;
     background-color: #87cfe1
 }
-
+.website-category p {
+        color: #00000;
+    text-align: center;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px
+               }
 .cookie-type-necessary p {
     color: #fff;
     text-align: start;
@@ -1119,7 +1198,7 @@ ul.navbar-nav a.btn:hover {
 
 #row-initial .cookie-type-unknown,.cookie-type-targeting,.cookie-type-functionality,.cookie-type-performance,.cookie-type-necessary {
     padding: 5px;
-    border-radius: 5rem 0 0 5rem
+    border-radius: 5rem
 }
 
 #row-initial #cookies-per-site-chart {
@@ -2026,7 +2105,7 @@ select::-ms-expand {
 .breakdown-middle-left-25 .line-vr {
     position: absolute;
     height: 50px;
-    width: 320px;
+    width: 300px;
     border: 3px solid #fff;
     border-top: 0;
     top: 52%;
@@ -2359,7 +2438,7 @@ select::-ms-expand {
 
     .breakdown-middle-left-25 {
         margin-right: 2%;
-        width: 80%!important;
+        width: 25%!important;
         margin-left: 9%
     }
 
@@ -2541,7 +2620,7 @@ select::-ms-expand {
     }
 
     .breakdown-middle-left-25 {
-        width: 80%!important;
+        width: 25%!important;
         text-align: center
     }
 
@@ -2743,7 +2822,7 @@ select::-ms-expand {
     .breakdown-middle-left-25 {
         float: left;
         margin-right: 2%;
-        width: 50%!important;
+        width: 25%!important;
         margin-left: 3%
     }
 

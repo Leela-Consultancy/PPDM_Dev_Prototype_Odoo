@@ -2,19 +2,28 @@
 from odoo import http
 
 class PPDMWebsite(http.Controller):
-
     @http.route('/indika/website', auth='public', website=True)
     def index(self, search='', **kw):
-        domain = []
-        domain = [('name', 'like', search)]
-        websites = http.request.env['indikamodule.websitestable'].search(domain, limit=1)
+        websites = http.request.env['indikamodule.websitestable'].search([('name', 'ilike', search)], limit=1)
         total_websites = len(websites)
 
-        return http.request.render('indika_module.website', {
-            'websites': websites,
-            'total_websites':total_websites
+        if websites:
+            # If a website is found, load its category data
+            category = websites.category  # Assuming 'category' is a field in 'indikamodule.websitestable'
+            category_data = http.request.env['indikamodule.websitecategorytable'].search([('category', '=', category)])
 
-        })
+            return http.request.render('indika_module.website', {
+                'websites': websites,
+                'category_data': category_data,
+                'total_websites': total_websites
+            })
+        else:
+            return http.request.render('indika_module.website', {
+                'websites': False,
+                'total_websites': total_websites
+            })
+
+
 
     @http.route('/indika/website_details/<model("indikamodule.websitestable"):website>/', auth='public', website=True)
     def website_details(self, website):

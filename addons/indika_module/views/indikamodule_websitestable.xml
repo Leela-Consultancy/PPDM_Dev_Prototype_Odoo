@@ -10,8 +10,9 @@
                     <group>
                         <!-- Fields to display in the form -->
                         <field name="name"/>
+                        <field name="category"/>
                         <field name="desc"/>
-                        <field name="url"/>
+                       <field name="url" />
                         <field name="privacy"/>
                         <field name="strictly_necessary_cookies"/>
                         <field name="performance_cookies"/>

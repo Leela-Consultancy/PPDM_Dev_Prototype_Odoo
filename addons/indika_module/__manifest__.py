@@ -13,6 +13,7 @@
 	'data' : [
 		     'security/groups.xml',
 			  'views/indikamodule_websitestable.xml',
+			  'views/indikamodule_websitecategorytable.xml',
 			'views/indikamodule_maintable.xml',
 			 'views/indikamodule_userstable.xml',
 			 'views/indikamodule_cookiedatatable.xml',
@@ -23,4 +24,11 @@
 			 'views/templates.xml',
 			 'views/search.xml',
 	],
+	'assets': {
+        'web.assets_backend': [
+			'web.assets_common',
+			'web.assets_backend',
+            'indikamodule/static/src/js/web_url_validation.js',
+        ]
+	},
 }
