@@ -4,16 +4,32 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- main  # Or your preferred branch
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+jobs:
+- job: Build
+  steps:
+  - checkout: self
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - script: |
+      # Set up your environment, install dependencies, etc.
+      # For example, install Odoo dependencies.
+      sudo apt-get install -y python3-pip
+      pip3 install -r requirements.txt
+    displayName: 'Set up Environment'
+
+  - script: |
+      # Build your Indika module
+      # For example, package it as a ZIP file.
+      zip -r indika_module.zip indika_module/*
+    displayName: 'Build Indika Module'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.SourcesDirectory)'
+      ArtifactName: 'indika-artifact'
+      publishLocation: 'Container'
+    displayName: 'Publish Artifact'
