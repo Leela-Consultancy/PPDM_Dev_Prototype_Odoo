@@ -1,4 +1,5 @@
 # Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -20,20 +21,17 @@ jobs:
           sudo apt-get install -y python3-pip
     displayName: 'Set up Environment'
 
-  - script: |
-      # Build your Indika module
-      # For example, package it as a ZIP file.
-      ls -la
-      cd $(Build.SourcesDirectory)
-       cd Leela-Consultancy/PPDM_Dev_Prototype_Odoo/addons/indika_module
-       ls -la
-      zip -r $(Build.SourcesDirectory)/indika_module.zip *
-      
-    displayName: 'Build Indika Module'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)/addons/indika_module'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: '$(Build.SourcesDirectory)'
-      ArtifactName: 'indika-artifact'
-      publishLocation: 'Container'
-    displayName: 'Publish Artifact'
+  # - task: PublishBuildArtifacts@1
+  #   inputs:
+  #     PathtoPublish: '$(Build.SourcesDirectory)'
+  #     ArtifactName: 'indika-artifact'
+  #     publishLocation: 'Container'
+  #   displayName: 'Publish Artifact'
