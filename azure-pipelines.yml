@@ -23,7 +23,7 @@ jobs:
   - script: |
       # Build your Indika module
       # For example, package it as a ZIP file.
-       cd Leela-Consultancy/PPDM_Dev_Prototype_Odoo/addons/
+       cd Leela-Consultancy/PPDM_Dev_Prototype_Odoo/addons/indika_module
       zip -r indika_module.zip indika_module/*
       
     displayName: 'Build Indika Module'
