@@ -19,14 +19,15 @@ jobs:
       # Set up your environment, install dependencies, etc.
       # For example, install Odoo dependencies.
           sudo apt-get install -y python3-pip
+          sudo apt-get install -y zip
     displayName: 'Set up Environment'
 
   - task: ArchiveFiles@2
     inputs:
-      rootFolderOrFile: '$(Build.BinariesDirectory)/addons/indika_module'
+      rootFolderOrFile: '$(Build.SourcesDirectory)/Leela-Consultancy/PPDM_Dev_Prototype_Odoo/addons/indika_module'
       includeRootFolder: true
       archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/indika_module.zip'
       replaceExistingArchive: true
 
   # - task: PublishBuildArtifacts@1
