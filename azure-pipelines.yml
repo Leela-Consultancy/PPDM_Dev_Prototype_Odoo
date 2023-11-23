@@ -19,7 +19,7 @@ jobs:
       # For example, install Odoo dependencies.
       if [ -f "requirements.txt" ]; then
           sudo apt-get install -y python3-pip
-          pip3 install -r requirements.txt
+          
       else
           echo "ERROR: requirements.txt not found"
           exit 1
