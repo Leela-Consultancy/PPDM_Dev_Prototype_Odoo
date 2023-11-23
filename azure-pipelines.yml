@@ -17,8 +17,13 @@ jobs:
   - script: |
       # Set up your environment, install dependencies, etc.
       # For example, install Odoo dependencies.
-      sudo apt-get install -y python3-pip
-      pip3 install -r requirements.txt
+      if [ -f "requirements.txt" ]; then
+          sudo apt-get install -y python3-pip
+          pip3 install -r requirements.txt
+      else
+          echo "ERROR: requirements.txt not found"
+          exit 1
+      fi
     displayName: 'Set up Environment'
 
   - script: |
