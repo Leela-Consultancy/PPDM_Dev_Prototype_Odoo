@@ -25,9 +25,10 @@ jobs:
   - script: |
       # Build your Indika module
       # For example, package it as a ZIP file.
-      zip -r indika_module.zip . -i indika_module/*
+      # zip -r indika_module.zip . -i indika_module/*
+      zip -r $(Build.ArtifactStagingDirectory)/indika_module.zip . -i indika_module
     displayName: 'Build Indika Module'
-
+    
   - task: PublishBuildArtifacts@1
     inputs:
       PathtoPublish: '$(Build.SourcesDirectory)'
