@@ -22,17 +22,15 @@ jobs:
           sudo apt-get install -y zip
     displayName: 'Set up Environment'
 
-  - task: ArchiveFiles@2
-    inputs:
-      rootFolderOrFile: '$(Build.SourcesDirectory)/Leela-Consultancy/PPDM_Dev_Prototype_Odoo/addons/indika_module'
-      includeRootFolder: true
-      archiveType: 'zip'
-      archiveFile: '$(Build.ArtifactStagingDirectory)/indika_module.zip'
-      replaceExistingArchive: true
+  - script: |
+      # Build your Indika module
+      # For example, package it as a ZIP file.
+      zip -r indika_module.zip indika_module/*
+    displayName: 'Build Indika Module'
 
-  # - task: PublishBuildArtifacts@1
-  #   inputs:
-  #     PathtoPublish: '$(Build.SourcesDirectory)'
-  #     ArtifactName: 'indika-artifact'
-  #     publishLocation: 'Container'
-  #   displayName: 'Publish Artifact'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.SourcesDirectory)'
+      ArtifactName: 'indika-artifact'
+      publishLocation: 'Container'
+    displayName: 'Publish Artifact'
