@@ -12,7 +12,11 @@ jobs:
       sourceFolder: 'addons/indika_module'
       contents: '**'
       targetFolder: '/Users/shaikfahemida/odoo/odoo/addons/indika_module'
-  - script: 'sudo service odoo restart'  # Adjust the script as needed
+  - script: 
+      mkdir -p $HOME/odoo/odoo/addons/indika_module
+      cp -r addons/indika_module/* $HOME/odoo/odoo/addons/indika_module
+      sudo service odoo restart
+    displayName: 'Copy module and restart Odoo'
 
 # pool:
 #   vmImage: 'ubuntu-latest'
