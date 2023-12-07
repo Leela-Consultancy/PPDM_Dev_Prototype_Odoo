@@ -1,4 +1,5 @@
 trigger:
+
 - main  
 pool:
   vmImage: 'ubuntu-latest'
@@ -12,13 +13,17 @@ jobs:
       sourceFolder: 'addons/indika_module'
       contents: '**'
       targetFolder: '$HOME/odoo/odoo/addons/indika_module'  # Use a different target folder
-  - script: 
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+  script: |
+      echo 'Hello world'
       cd ~
-      cd $HOME
-      cd ls
-      cd odoo/odoo
+      ls
+      cd odoo
+      cd odoo
       cd python3.8 odoo-bin --addons-path addons
-    displayName: 'Copy module and restart Odoo'
+  displayName: 'Copy module and restart Odoo'
 
 # pool:
 #   vmImage: 'ubuntu-latest'
