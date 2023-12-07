@@ -1,0 +1,16 @@
+trigger:
+- main  # Replace with your branch name
+
+pool:
+  vmImage: 'macos-latest'
+
+jobs:
+- job: DeployOdooModule
+  steps:
+  - checkout: self
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: 'addons/indika_module'
+      contents: '**'
+      targetFolder: '/Users/shaikfahemida/odoo/odoo/addons/indika_module'
+  - script: 'sudo service odoo restart'  # Adjust the script as needed
