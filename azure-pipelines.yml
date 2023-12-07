@@ -14,8 +14,8 @@ jobs:
       targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module_copy'  # Use a different target folder
   - script: 
       mkdir -p $HOME/odoo/odoo/addons/indika_module
-    cp -r $(Build.ArtifactStagingDirectory)/indika_module_copy/* $HOME/odoo/odoo/addons/indika_module
-    sudo service odoo restart
+      cp -r $(Build.ArtifactStagingDirectory)/indika_module_copy/* $HOME/odoo/odoo/addons/indika_module
+      sudo service odoo restart
     displayName: 'Copy module and restart Odoo'
 
 # pool:
