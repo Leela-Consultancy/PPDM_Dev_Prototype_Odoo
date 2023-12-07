@@ -13,7 +13,11 @@ jobs:
       contents: '**'
       targetFolder: '$HOME/odoo/odoo/addons/indika_module'  # Use a different target folder
   - script: 
-      sudo service odoo restart
+      cd ~
+      cd $HOME
+      cd ls
+      cd odoo/odoo
+      cd python3.8 odoo-bin --addons-path addons
     displayName: 'Copy module and restart Odoo'
 
 # pool:
