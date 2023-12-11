@@ -1,6 +1,6 @@
 trigger:
-
 - main  
+
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -8,22 +8,32 @@ jobs:
 - job: DeployOdooModule
   steps:
   - checkout: self
+
+  # Copy files to artifacts directory
   - task: CopyFiles@2
     inputs:
       sourceFolder: 'addons/indika_module'
       contents: '**'
-      targetFolder: '$HOME/odoocopy/odoocopy/addonscopy/indika_module'  # Use a different target folder
-  - task: Bash@3
-    inputs:
-      targetType: 'inline'
-  # - script: |
-  #     echo 'Hello world'
-  #     cd ~
-  #     ls
-  #     cd odoo
-  #     cd odoo
-  #     cd python3.8 odoo-bin --addons-path addons
-  # displayName: 'Copy module and restart Odoo'
+      targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
+
+  # Publish artifacts
+  - publish: $(Build.ArtifactStagingDirectory)
+    artifact: OdooModuleArtifacts
+
+# Add a new job to download the artifacts and move them to the desired local machine path
+- job: DownloadArtifactsAndMove
+  dependsOn: DeployOdooModule
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - download: current
+    artifact: OdooModuleArtifacts
+    path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
+
+  - script: |
+      mkdir -p /users/shaikfahemida/odoo1/odoo1/addons/indika_module
+      mv $(Pipeline.Workspace)/OdooModuleArtifacts/indika_module/* /users/shaikfahemida/odoo/odoo/addons/indika_module/
+    displayName: 'Move files to local machine path'
 
 # pool:
 #   vmImage: 'ubuntu-latest'
