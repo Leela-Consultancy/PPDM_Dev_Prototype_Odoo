@@ -12,7 +12,7 @@ jobs:
     inputs:
       sourceFolder: 'addons/indika_module'
       contents: '**'
-      targetFolder: '$HOME/odoo/odoo/addons/indika_module'  # Use a different target folder
+      targetFolder: '$HOME/odoocopy/odoocopy/addonscopy/indika_module'  # Use a different target folder
   - task: Bash@3
     inputs:
       targetType: 'inline'
