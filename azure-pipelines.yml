@@ -28,11 +28,11 @@ jobs:
   steps:
   - download: current
     artifact: OdooModuleArtifacts
-    path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
+    # path: $(Pipeline.Workspace)/OdooModuleArtifacts
 
   - script: |
-      mkdir -p /users/shaikfahemida/odoo1/odoo1/addons/indika_module
-      mv $(Pipeline.Workspace)/OdooModuleArtifacts/indika_module/* /users/shaikfahemida/odoo/odoo/addons/indika_module/
+      mkdir -p /users/shaikfahemida/odoo/odoo/addons/indika_module1
+      mv $(Pipeline.Workspace)/OdooModuleArtifacts/indika_module/* /users/shaikfahemida/odoo/odoo/addons/indika_module1/
     displayName: 'Move files to local machine path'
 
 # pool:
