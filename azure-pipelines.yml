@@ -16,14 +16,14 @@ jobs:
   - task: Bash@3
     inputs:
       targetType: 'inline'
-  - script: |
-      echo 'Hello world'
-      cd ~
-      ls
-      cd odoo
-      cd odoo
-      cd python3.8 odoo-bin --addons-path addons
-  displayName: 'Copy module and restart Odoo'
+  # - script: |
+  #     echo 'Hello world'
+  #     cd ~
+  #     ls
+  #     cd odoo
+  #     cd odoo
+  #     cd python3.8 odoo-bin --addons-path addons
+  # displayName: 'Copy module and restart Odoo'
 
 # pool:
 #   vmImage: 'ubuntu-latest'
