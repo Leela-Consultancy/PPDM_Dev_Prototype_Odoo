@@ -17,23 +17,27 @@ jobs:
       targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
 
   # Publish artifacts
-  - publish: $(Build.ArtifactStagingDirectory)
-    artifact: OdooModuleArtifacts
+  - task: PublishBuildArtifacts@1
+    inputs:
+       PathtoPublish: '$(Build.SourcesDirectory)'
+       ArtifactName: 'indika-artifact'
+       publishLocation: 'Container'
+    displayName: 'Publish Artifact'
 
-# Add a new job to download the artifacts and move them to the desired local machine path
-- job: DownloadArtifactsAndMove
-  dependsOn: DeployOdooModule
-  pool:
-    vmImage: 'ubuntu-latest'
-  steps:
-  - download: current
-    artifact: OdooModuleArtifacts
-    # path: $(Pipeline.Workspace)/OdooModuleArtifacts
+# # Add a new job to download the artifacts and move them to the desired local machine path
+# - job: DownloadArtifactsAndMove
+#   dependsOn: DeployOdooModule
+#   pool:
+#     vmImage: 'ubuntu-latest'
+#   steps:
+#   - download: current
+#     artifact: OdooModuleArtifacts
+#     # path: $(Pipeline.Workspace)/OdooModuleArtifacts
 
-  - script: |
-      mkdir -p /users/shaikfahemida/odoo/odoo/addons/indika_module1
-      mv $(Pipeline.Workspace)/OdooModuleArtifacts/indika_module/* /users/shaikfahemida/odoo/odoo/addons/indika_module1/
-    displayName: 'Move files to local machine path'
+#   - script: |
+#       mkdir -p /users/shaikfahemida/odoo/odoo/addons/indika_module1
+#       mv $(Pipeline.Workspace)/OdooModuleArtifacts/indika_module/* /users/shaikfahemida/odoo/odoo/addons/indika_module1/
+#     displayName: 'Move files to local machine path'
 
 # pool:
 #   vmImage: 'ubuntu-latest'
@@ -53,8 +57,8 @@ jobs:
 #   - script: |
 #       # Build your Indika module
 #       # For example, package it as a ZIP file.
-#       # zip -r indika_module.zip . -i indika_module/*
-#       zip -r $(Build.ArtifactStagingDirectory)/indika_module.zip . -i indika_module
+#       # zip -r indika_module.zip . -i addons/indika_module/*
+#       zip -r $(Build.ArtifactStagingDirectory)/indika_module.zip . -i addons/indika_module
 #     displayName: 'Build Indika Module'
     
 #   - task: PublishBuildArtifacts@1
