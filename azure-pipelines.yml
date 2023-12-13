@@ -19,8 +19,8 @@ jobs:
   # Publish artifacts
   - task: PublishBuildArtifacts@1
     inputs:
-       PathtoPublish: '$(Build.SourcesDirectory)'
-       ArtifactName: 'indika-artifact'
+       PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
+       ArtifactName: 'copiedindikamodule-artifact'
        publishLocation: 'Container'
     displayName: 'Publish Artifact'
 
