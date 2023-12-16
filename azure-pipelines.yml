@@ -35,6 +35,7 @@ jobs:
     # path: $(Pipeline.Workspace)/OdooModuleArtifacts
 
   - script: |
-      cp -r /home/vsts/work/1/copiedindikamodule-artifact/* /Users/shaikfahemida/odoo/odoo/addons/indika_module/
-      displayName: 'Move files to local machine path'
+      mkdir -p /Users/shaikfahemida/deployodoo/
+      cp -r /home/vsts/work/1/copiedindikamodule-artifact/* /Users/shaikfahemida/deployodoo/
+    displayName: 'Move files to local machine path'
 
