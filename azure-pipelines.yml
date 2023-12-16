@@ -38,31 +38,3 @@ jobs:
       cp $(Pipeline.Workspace)/copiedindikamodule-artifact/* /users/shaikfahemida/odoo/odoo/addons/indika_module1/
     displayName: 'Move files to local machine path'
 
-# pool:
-#   vmImage: 'ubuntu-latest'
-
-# jobs:
-# - job: Build
-#   steps:
-#   - checkout: self
-
-#   - script: |
-#       # Set up your environment, install dependencies, etc.
-#       # For example, install Odoo dependencies.
-#           sudo apt-get install -y python3-pip
-#           sudo apt-get install -y zip
-#     displayName: 'Set up Environment'
-
-#   - script: |
-#       # Build your Indika module
-#       # For example, package it as a ZIP file.
-#       # zip -r indika_module.zip . -i addons/indika_module/*
-#       zip -r $(Build.ArtifactStagingDirectory)/indika_module.zip . -i addons/indika_module
-#     displayName: 'Build Indika Module'
-    
-#   - task: PublishBuildArtifacts@1
-#     inputs:
-#       PathtoPublish: '$(Build.SourcesDirectory)'
-#       ArtifactName: 'indika-artifact'
-#       publishLocation: 'Container'
-#     displayName: 'Publish Artifact'
