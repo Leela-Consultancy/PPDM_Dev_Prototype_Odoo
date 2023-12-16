@@ -42,8 +42,9 @@ jobs:
     inputs:
       targetType: 'inline'
       script: |
-        mkdir -p /Users/shaikfahemida/deployodoo
-        cp -r /home/vsts/work/1/copiedindikamodule-artifact/* /Users/shaikfahemida/deployodoo/
+        - script: |
+          mkdir -p $HOME/deployodoo/
+          cp -r $(Pipeline.Workspace)/copiedindikamodule-artifact/* $HOME/deployodoo/
     
         echo 'Hello world'
 
