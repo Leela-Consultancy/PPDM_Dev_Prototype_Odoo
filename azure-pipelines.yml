@@ -38,4 +38,12 @@ jobs:
       mkdir -p $HOME/deployodoo/
       cp -r /home/vsts/work/1/copiedindikamodule-artifact/* $HOME/deployodoo/
     displayName: 'Move files to local machine path'
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        mkdir -p /Users/shaikfahemida/deployodoo
+        cp -r /home/vsts/work/1/copiedindikamodule-artifact/* /Users/shaikfahemida/deployodoo/
+    
+        echo 'Hello world'
 
