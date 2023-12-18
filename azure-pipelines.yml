@@ -35,6 +35,11 @@ stages:
         downloadType: 'single'
         artifactName: 'copiedindikamodule-artifact'
         downloadPath: '$(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts'''
+    - task: CmdLine@2
+      inputs:
+        script: |
+          pwd
+          echo Hello world
     - script: |
         mkdir -p $HOME/deployodoo/
         pwd
