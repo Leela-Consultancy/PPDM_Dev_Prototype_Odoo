@@ -29,30 +29,17 @@ stages:
         ArtifactName: 'copiedindikamodule-artifact'
         publishLocation: 'Container'
       displayName: 'Publish Artifact'
+    - task: DownloadBuildArtifacts@1
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'copiedindikamodule-artifact'
+        downloadPath: '$(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts'''
+    - script: |
+        mkdir -p $HOME/deployodoo/
+        cp -r $(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts/* $HOME/deployodoo/
+      displayName: 'Move files to local machine path'
 
-- stage: DeployToLocalMachine
-  displayName: 'Deploy to Local Machine'
-  jobs:
-  - deployment: Deploy
-    displayName: Deploy
-    # pool:
-    #   vmImage: 'ubuntu-latest'
-    environment: 'local env'  # Replace with the name of your environment in Azure DevOps
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - download: current
-            artifact: 'copiedindikamodule-artifact'
-            # path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
-
-          - script: |
-              mkdir -p $HOME/deployodoo/
-              cp -r $(Pipeline.Workspace)/copiedindikamodule-artifact/* $HOME/deployodoo/
-            displayName: 'Move files to local machine path'
-
-          - task: Bash@3
-            inputs:
-              targetType: 'inline'
-              script: |
-                echo 'Hello world'
+    - script: |
+        echo 'Hello world'
+      displayName: 'Print a message'
