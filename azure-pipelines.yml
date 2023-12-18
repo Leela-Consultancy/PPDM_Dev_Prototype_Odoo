@@ -48,7 +48,7 @@ stages:
 
           - script: |
               mkdir -p $HOME/deployodoo/
-              cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
+              cp -r $(Pipeline.Workspace)/copiedindikamodule-artifact/* $HOME/deployodoo/
             displayName: 'Move files to local machine path'
 
           - task: Bash@3
