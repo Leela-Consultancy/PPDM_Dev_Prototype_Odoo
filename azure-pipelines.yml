@@ -30,20 +30,20 @@ jobs:
       definition: '1'
       buildVersionToDownload: 'latest'
       artifactName: 'copiedindiakamodule-artifact'
-      targetPath: '/users/shaikfahemida/'
-# Add a new job to download the artifacts and move them to the desired local machine path
-- job: DownloadArtifactsAnddeploytolocalmachine
-  displayName:  DeployOdooModule
-  pool:
-    vmImage: 'ubuntu-latest'
-  steps:
-  - download: current
-    artifact: 'copiedindikamodule-artifact'
-    # path: $(Pipeline.Workspace)/OdooModuleArtifacts
+      targetPath: '$(Pipeline.Workspace)/OdooModuleArtifacts'
+# # Add a new job to download the artifacts and move them to the desired local machine path
+# - job: DownloadArtifactsAnddeploytolocalmachine
+#   displayName:  DeployOdooModule
+#   pool:
+#     vmImage: 'ubuntu-latest'
+#   steps:
+#   - download: current
+#     artifact: 'copiedindikamodule-artifact'
+#     # path: $(Pipeline.Workspace)/OdooModuleArtifacts
 
   - script: |
       mkdir -p $HOME/deployodoo/
-      cp -r /home/vsts/work/1/copiedindikamodule-artifact/* $HOME/deployodoo/
+      cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
     displayName: 'Move files to local machine path'
   - task: Bash@3
     inputs:
@@ -51,7 +51,7 @@ jobs:
       script: |
         - script: |
           mkdir -p $HOME/deployodoo/
-          cp -r $(Pipeline.Workspace)/copiedindikamodule-artifact/* $HOME/deployodoo/
+          cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
     
         echo 'Hello world'
 
