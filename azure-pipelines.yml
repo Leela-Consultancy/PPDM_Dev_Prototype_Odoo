@@ -26,16 +26,17 @@ jobs:
 
 - job: DownloadAndDeployToLocalMachine
   displayName: DeployOdooModule
-  
+  pool:
+    vmImage: 'ubuntu-latest'
   steps:
   - download: current
     artifact: 'copiedindikamodule-artifact'
-  path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
+    path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
 
   - script: |
       mkdir -p $HOME/deployodoo/
       cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
-     displayName: 'Move files to local machine path'
+    displayName: 'Move files to local machine path'
 
   - task: Bash@3
     inputs:
