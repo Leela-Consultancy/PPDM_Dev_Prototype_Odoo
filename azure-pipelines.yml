@@ -23,7 +23,14 @@ jobs:
        ArtifactName: 'copiedindikamodule-artifact'
        publishLocation: 'Container'
     displayName: 'Publish Artifact'
-
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      buildType: 'specific'
+      project: '0a1a54f4-4331-40d0-9838-837827b7653e'
+      definition: '1'
+      buildVersionToDownload: 'latest'
+      artifactName: 'copiedindiakamodule-artifact'
+      targetPath: '/users/shaikfahemida/'
 # Add a new job to download the artifacts and move them to the desired local machine path
 - job: DownloadArtifactsAnddeploytolocalmachine
   displayName:  DeployOdooModule
