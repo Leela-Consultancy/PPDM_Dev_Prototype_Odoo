@@ -31,7 +31,7 @@ jobs:
     vmImage: 'ubuntu-latest'
   steps:
   - download: current
-    artifact: 'copiedindikamodule-artifact'
+    artifact: 'OdooModuleArtifacts'
     # path: $(Pipeline.Workspace)/OdooModuleArtifacts
 
   - script: |
