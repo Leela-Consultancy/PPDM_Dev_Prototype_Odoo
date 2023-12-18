@@ -35,8 +35,8 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    pool:
-      vmImage: 'ubuntu-latest'
+    # pool:
+    #   vmImage: 'ubuntu-latest'
     environment: 'local env'  # Replace with the name of your environment in Azure DevOps
     strategy:
       runOnce:
