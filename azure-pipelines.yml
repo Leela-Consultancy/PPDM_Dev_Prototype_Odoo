@@ -34,7 +34,7 @@ stages:
         buildType: 'current'
         downloadType: 'single'
         artifactName: 'copiedindikamodule-artifact'
-        downloadPath: '$(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts'''
+        downloadPath: '$(System.ArtifactsDirectory)'
     - task: CmdLine@2
       inputs:
         script: |
@@ -43,9 +43,7 @@ stages:
     - script: |
         mkdir -p $HOME/deployodoo/
         pwd
-        cp -r $(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts/* $HOME/deployodoo/
+        cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/deployodoo/
       displayName: 'Move files to local machine path'
 
-    - script: |
-        echo 'Hello world'
-      displayName: 'Print a message'
+ 
