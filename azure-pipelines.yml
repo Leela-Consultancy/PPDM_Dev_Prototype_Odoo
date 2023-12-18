@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 jobs:
-- job: BuildAndPublishOdooModule
+- job: DeployOdooModule
   steps:
   - checkout: self
 
@@ -23,24 +23,35 @@ jobs:
        ArtifactName: 'copiedindikamodule-artifact'
        publishLocation: 'Container'
     displayName: 'Publish Artifact'
-
-- task: DownloadBuildArtifacts@1
-  inputs:
-    buildType: 'specific'
-    project: '0a1a54f4-4331-40d0-9838-837827b7653e'
-    pipeline: '1'
-    buildVersionToDownload: 'latest'
-    downloadType: 'single'
-    artifactName: 'copiedindikamodule-artifact'
-    downloadPath: '$(System.ArtifactsDirectory)'
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      buildType: 'specific'
+      project: '0a1a54f4-4331-40d0-9838-837827b7653e'
+      definition: '1'
+      buildVersionToDownload: 'latest'
+      artifactName: 'copiedindiakamodule-artifact'
+      targetPath: '/users/shaikfahemida/'
+# Add a new job to download the artifacts and move them to the desired local machine path
+- job: DownloadArtifactsAnddeploytolocalmachine
+  displayName:  DeployOdooModule
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - download: current
+    artifact: 'copiedindikamodule-artifact'
+    # path: $(Pipeline.Workspace)/OdooModuleArtifacts
 
   - script: |
       mkdir -p $HOME/deployodoo/
-      cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/deployodoo/
+      cp -r /home/vsts/work/1/copiedindikamodule-artifact/* $HOME/deployodoo/
     displayName: 'Move files to local machine path'
-
   - task: Bash@3
     inputs:
       targetType: 'inline'
       script: |
+        - script: |
+          mkdir -p $HOME/deployodoo/
+          cp -r $(Pipeline.Workspace)/copiedindikamodule-artifact/* $HOME/deployodoo/
+    
         echo 'Hello world'
+
