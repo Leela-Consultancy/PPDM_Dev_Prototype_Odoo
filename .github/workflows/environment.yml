@@ -1,4 +1,0 @@
-env:
-    pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
-    LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
-  
