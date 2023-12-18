@@ -37,6 +37,7 @@ stages:
         downloadPath: '$(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts'''
     - script: |
         mkdir -p $HOME/deployodoo/
+        pwd
         cp -r $(Agent.HomeDirectory)/Downloads/OdooModuleArtifacts/* $HOME/deployodoo/
       displayName: 'Move files to local machine path'
 
