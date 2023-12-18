@@ -44,7 +44,7 @@ stages:
           steps:
           - download: current
             artifact: 'copiedindikamodule-artifact'
-            path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
+            # path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
 
           - script: |
               mkdir -p $HOME/deployodoo/
