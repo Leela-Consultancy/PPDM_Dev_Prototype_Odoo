@@ -34,9 +34,9 @@ jobs:
     artifactName: 'copiedindikamodule-artifact'
     downloadPath: '$(System.ArtifactsDirectory)'
 
-  - script: 
+  - script: |
       mkdir -p $HOME/deployodoo/
-      cp -r $(System.ArtifactsDirectory)/* $HOME/deployodoo/
+      cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/deployodoo/
     displayName: 'Move files to local machine path'
 
   - task: Bash@3
