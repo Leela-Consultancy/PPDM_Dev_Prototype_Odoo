@@ -1,50 +1,58 @@
 trigger:
-- '*'  
+- '*'
+
+pr:
+- '*'
 
 pool:
   vmImage: 'ubuntu-latest'
 
-jobs:
-- job: DeployOdooModule
-  steps:
-  - checkout: self
+stages:
+- stage: Build
+  displayName: 'Build Stage'
+  jobs:
+  - job: BuildAndPublishOdooModule
+    steps:
+    - checkout: self
 
-  # Copy files to artifacts directory
-  - task: CopyFiles@2
-    inputs:
-      sourceFolder: 'addons/indika_module'
-      contents: '**'
-      targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
+    # Copy files to artifacts directory
+    - task: CopyFiles@2
+      inputs:
+        sourceFolder: 'addons/indika_module'
+        contents: '**'
+        targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
 
-  # Publish artifacts
-  - task: PublishBuildArtifacts@1
-    inputs:
-       PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
-       ArtifactName: 'OdooModuleArtifacts'
-       publishLocation: 'Container'
-    displayName: 'Publish Artifact'
+    # Publish artifacts
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
+        ArtifactName: 'copiedindikamodule-artifact'
+        publishLocation: 'Container'
+      displayName: 'Publish Artifact'
 
-# Add a new job to download the artifacts and move them to the desired local machine path
-- job: DownloadArtifactsAnddeploytolocalmachine
-  displayName:  DeployOdooModule
-  pool:
-    vmImage: 'ubuntu-latest'
-  steps:
-  - download: current
-    artifact: 'OdooModuleArtifacts'
-    # path: $(Pipeline.Workspace)/OdooModuleArtifacts
+- stage: DeployToLocalMachine
+  displayName: 'Deploy to Local Machine'
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    environment: 'local env'  # Replace with the name of your environment in Azure DevOps
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - download: current
+            artifact: 'copiedindikamodule-artifact'
+            path: '$(Pipeline.Workspace)/OdooModuleArtifacts'
 
-  - script: |
-      mkdir -p $HOME/deployodoo/
-      cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
-    displayName: 'Move files to local machine path'
-  - task: Bash@3
-    inputs:
-      targetType: 'inline'
-      script: |
-        - script: |
-          mkdir -p $HOME/deployodoo/
-          cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
-    
-        echo 'Hello world'
+          - script: |
+              mkdir -p $HOME/deployodoo/
+              cp -r $(Pipeline.Workspace)/OdooModuleArtifacts/* $HOME/deployodoo/
+            displayName: 'Move files to local machine path'
 
+          - task: Bash@3
+            inputs:
+              targetType: 'inline'
+              script: |
+                echo 'Hello world'
