@@ -5,7 +5,7 @@ pr:
 - '*'
 
 pool:
-  vmImage: 'Shaiks-Air'
+  name: 'Shaiks-Air'
 
 stages:
 - stage: Build
