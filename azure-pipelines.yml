@@ -41,9 +41,8 @@ stages:
           pwd
           echo Hello world
     - script: |
-        mkdir -p $HOME/deployodoo/
         pwd
-        cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/deployodoo/
+        cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
       displayName: 'Move files to local machine path'
 
  
