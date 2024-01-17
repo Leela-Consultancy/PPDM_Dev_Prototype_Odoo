@@ -43,6 +43,16 @@ stages:
     - script: |
         pwd
         cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
+        if [ "$(Agent.OS)" == "Linux" ] || [ "$(Agent.OS)" == "Darwin" ]; then
+          # macOS/Linux specific commands
+          pwd
+          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
+        elif [ "$(Agent.OS)" == "Windows_NT" ]; then
+          # Windows specific commands
+          xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
+        else
+          echo "Unsupported operating system"
+          exit 1
+        fi 
       displayName: 'Move files to local machine path'
-
  
