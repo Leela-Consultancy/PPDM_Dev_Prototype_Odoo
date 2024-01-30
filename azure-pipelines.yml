@@ -40,7 +40,6 @@ stages:
         script: |
           echo Hello world
     - script: |
-        cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
         if [ "$(Agent.OS)" == "Linux" ] || [ "$(Agent.OS)" == "Darwin" ]; then
           # macOS/Linux specific commands
           pwd
