@@ -5,7 +5,7 @@ pr:
 - '*'
 
 pool:
-  name: agentrafi4WinOS
+  name: myagentpool
 
 stages:
 - stage: Build
