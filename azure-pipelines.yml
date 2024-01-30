@@ -49,8 +49,9 @@ stages:
         elif [ "$(Agent.OS)" == "Windows_NT" ]; then
           # Windows specific commands
           echo "welcome to the Windows Os system"
+          copy "$(System.ArtifactsDirectory)\copiedindikamodule-artifact\*" "%HOMEPATH%\odoo\odoo\addons\indika_module\"
           # xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
-          xcopy "$(System.ArtifactsDirectory)\\copiedindikamodule-artifact\\*" "%HOMEPATH%\\odoo\\odoo\\addons\\indika_module\\ " /E /Y
+          # xcopy "$(System.ArtifactsDirectory)\\copiedindikamodule-artifact\\*" "%HOMEPATH%\\odoo\\odoo\\addons\\indika_module\\ " /E /Y
         else
           echo "Unsupported operating system"
           exit 1
