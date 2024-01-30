@@ -43,7 +43,7 @@ stages:
         if [ "$(Agent.OS)" == "Linux" ] || [ "$(Agent.OS)" == "Darwin" ]; then
           # macOS/Linux specific commands
           pwd
-          echo "welcome to the Mac Os system"
+          echo welcome to the Mac Os system
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
         elif [ "$(Agent.OS)" == "Windows_NT" ]; then
           # Windows specific commands
