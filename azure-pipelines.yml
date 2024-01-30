@@ -38,17 +38,17 @@ stages:
     - task: CmdLine@2
       inputs:
         script: |
-          pwd
           echo Hello world
     - script: |
-        pwd
         cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
         if [ "$(Agent.OS)" == "Linux" ] || [ "$(Agent.OS)" == "Darwin" ]; then
           # macOS/Linux specific commands
           pwd
+          echo "welcome to the Mac Os system"
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
         elif [ "$(Agent.OS)" == "Windows_NT" ]; then
           # Windows specific commands
+          echo "welcome to the Windows Os system"
           xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
         else
           echo "Unsupported operating system"
