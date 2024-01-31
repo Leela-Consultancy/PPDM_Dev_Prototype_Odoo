@@ -50,7 +50,7 @@ stages:
           echo welcome to the Mac Os system
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
           else 
-            echo "welcome to the Windows Os system"
+            echo welcome to the Windows Os system
             xcopy /E /Y "$(System.ArtifactsDirectory)\copiedindikamodule-artifact\*" "%HOMEPATH%\odoo\odoo\addons\indika_module\"
           fi
       
