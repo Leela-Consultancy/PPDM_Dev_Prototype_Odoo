@@ -49,11 +49,8 @@ stages:
           pwd
           echo welcome to the Mac Os system
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
-          elif [ "$(Agent.OS)" == "Windows_NT" ]; then
+          else [ "$(Agent.OS)" == "Windows_NT" ]; then
             echo "welcome to the Windows Os system"
             xcopy /E /Y "$(System.ArtifactsDirectory)\copiedindikamodule-artifact\*" "%HOMEPATH%\odoo\odoo\addons\indika_module\"
-          else
-            echo "Unsupported operating system"
-            exit 1
-          fi 
+          
       
