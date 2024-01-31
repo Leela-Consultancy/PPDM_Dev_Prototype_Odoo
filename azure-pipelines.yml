@@ -51,6 +51,6 @@ stages:
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
           else 
             echo welcome to the Windows Os system
-            xcopy /E /Y "$(System.ArtifactsDirectory)\copiedindikamodule-artifact\*" "%HOMEPATH%\odoo\odoo\addons\indika_module\"
+            xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
           fi
       
