@@ -39,7 +39,7 @@ stages:
       inputs:
         script: |
           echo Hello world
-    - task: CopyFiles@1
+    - task: CmdLine@2
       
       inputs:
         script: |
