@@ -76,7 +76,7 @@ stages:
           xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
 
 - stage: BuildashwinMac
-  displayName: 'Build Stage - Mac OS'
+  displayName: 'Build Stage - Ashwin Mac'
   jobs:
   - job: BuildAndPublishOdooModule
     pool:
@@ -107,7 +107,7 @@ stages:
       inputs:
         script: |
           echo welcome to the Mac OS system
-          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/addons/indika_module/
+          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
 
 
       
