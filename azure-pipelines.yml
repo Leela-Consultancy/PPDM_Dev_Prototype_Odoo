@@ -80,7 +80,7 @@ stages:
   jobs:
   - job: BuildAndPublishOdooModule
     pool:
-      name: aswinMacpool  # Specify the Mac OS agent pool
+      name: ashwinMacpool  # Specify the Mac OS agent pool
     steps:
     - checkout: self
     - task: CopyFiles@2
