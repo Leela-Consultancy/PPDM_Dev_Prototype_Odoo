@@ -110,9 +110,13 @@ stages:
           pwd
           echo $HOME
           cd $Home
+          pwd
           cd odoo
+          pwd
           cd addons
+          pwd
           mkdir indika_module
+          pwd
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/addons/indika_module/
 
 
