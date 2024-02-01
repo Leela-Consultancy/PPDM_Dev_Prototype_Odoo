@@ -107,7 +107,8 @@ stages:
       inputs:
         script: |
           echo welcome to the Mac OS system
-          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
+          pwd
+          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/addons/indika_module/
 
 
       
