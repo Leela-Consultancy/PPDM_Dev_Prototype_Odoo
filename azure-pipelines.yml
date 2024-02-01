@@ -109,6 +109,10 @@ stages:
           echo welcome to the Mac OS system
           pwd
           echo $HOME
+          cd $Home
+          cd odoo
+          cd addons
+          mkdir indika_module
           cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/addons/indika_module/
 
 
