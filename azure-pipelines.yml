@@ -1,34 +1,29 @@
 trigger:
 - '*'
 
+
 pr:
 - '*'
 
-pool:
-  name: myagentpool
-
 stages:
 - stage: Build
-  displayName: 'Build Stage'
+  displayName: 'Build Stage - Mac OS'
   jobs:
   - job: BuildAndPublishOdooModule
+    pool:
+      name: myagentpool  # Specify the Mac OS agent pool
     steps:
     - checkout: self
-
-    # Copy files to artifacts directory
     - task: CopyFiles@2
       inputs:
         sourceFolder: 'addons/indika_module'
         contents: '**'
         targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
-
-    # Publish artifacts
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
         ArtifactName: 'copiedindikamodule-artifact'
         publishLocation: 'Container'
-      displayName: 'Publish Artifact'
     - task: DownloadBuildArtifacts@1
       inputs:
         buildType: 'current'
@@ -40,17 +35,45 @@ stages:
         script: |
           echo Hello world
     - task: CmdLine@2
-      
       inputs:
         script: |
-          echo welcome to choose Os System and then copy files
-          if [ "$(Agent.OS)" == "Linux" ] || [ "$(Agent.OS)" == "Darwin" ]; then
-            # macOS/Linux specific commands
-            pwd
-            echo welcome to the Mac Os system
-            cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
-          else 
-            echo welcome to the Windows Os system
-            xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
-          fi
+          echo welcome to the Mac OS system
+          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
+
+- stage: BuildWindows
+  displayName: 'Build Stage - Windows'
+  jobs:
+  - job: BuildAndPublishOdooModuleWindows
+    pool:
+      name: rafiWinpool  # Specify the Windows agent pool
+    steps:
+    - checkout: self
+    - task: CopyFiles@2
+      inputs:
+        sourceFolder: 'addons/indika_module'
+        contents: '**'
+        targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
+        ArtifactName: 'copiedindikamodule-artifact'
+        publishLocation: 'Container'
+    - task: DownloadBuildArtifacts@1
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'copiedindikamodule-artifact'
+        downloadPath: '$(System.ArtifactsDirectory)'
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Hello world
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo welcome to the Windows system
+          mkdir odoo
+          xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
+
+
       
