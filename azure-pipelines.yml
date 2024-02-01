@@ -75,7 +75,7 @@ stages:
           mkdir odoo
           xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
 
-- stage: Build
+- stage: BuildashwinMac
   displayName: 'Build Stage - Mac OS'
   jobs:
   - job: BuildAndPublishOdooModule
