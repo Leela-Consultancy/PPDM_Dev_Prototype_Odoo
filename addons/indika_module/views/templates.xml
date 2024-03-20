@@ -164,7 +164,7 @@
                     <div class="cookie-type-necessary">
                         <p>Strictly Necessary Cookies  <span class="value">
                              <t t-if="category_data and category_data[0].strictly_necessary_cookies">
-                                    <t t-esc="category_data.strictly_necessary_cookies"/>
+                                     <!-- <t t-esc="category_data.strictly_necessary_cookies"/> -->
                              </t>
                          <t t-else=""> 0</t>
                         </span></p>
