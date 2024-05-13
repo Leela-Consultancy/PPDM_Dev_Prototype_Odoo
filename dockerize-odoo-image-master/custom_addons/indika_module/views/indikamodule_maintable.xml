@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+        <!-- Main Table Form View -->
+        <record id="indikamodule_maintable_view_form" model="ir.ui.view">
+            <field name="name">Main Table Form</field>
+            <field name="model">indikamodule.maintable</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <!-- Website Reference -->
+                            <field name="name"/>
+
+                            <!-- Privacy Policy -->
+                            <field name="policy" readonly="1"/>
+
+                            <!-- Cookie Category -->
+                            <field name="cookie_category"/>
+
+                            <!-- Cookie Category Description -->
+                            <field name="description"/>
+                        </group>
+
+                        <!-- Website2PPDM Mapping -->
+                        <notebook>
+                            <page string="Website2PPDM Mapping">
+                                <field name="website_to_indika" widget="one2many_list">
+                                    <tree editable="top">
+                                        <!-- Vendor Site -->
+                                        <field name="name"/>
+
+                                        <!-- Cookie Data -->
+                                        <field name="cookie_data_id" domain="[('vendor_id', '=', name)]"/>
+                                    </tree>
+                                </field>
+                                <field name="website_to_indika" widget="many2many_tags">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="cookie_data_id"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <!-- Vendor Site -->
+                                            <field name="name" domain="[('website_id', '=', parent.name)]"/>
+
+
+                                            <!-- Cookie Data -->
+                                            <field name="cookie_data_id" domain="[('vendor_id', '=', name)]"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Main Table Tree View -->
+        <record id="indikamodule_maintable_view_tree" model="ir.ui.view">
+            <field name="name">Main Table List</field>
+            <field name="model">indikamodule.maintable</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Fields to display in the tree view -->
+                    <field name="name"/>
+                    <field name="cookie_category"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Main Table Action -->
+        <record id="indikamodule_maintable_action" model="ir.actions.act_window">
+            <field name="name">PPDM Mapping</field>
+            <field name="res_model">indikamodule.maintable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Main Table Menu Item -->
+        <menuitem id="indikamodule_maintable_menu"
+                  name="PPDM Mapping"
+                  action="indikamodule_maintable_action"
+                  parent="indikamodule_menu"
+                  sequence="3"/>
+    </data>
+</odoo>
