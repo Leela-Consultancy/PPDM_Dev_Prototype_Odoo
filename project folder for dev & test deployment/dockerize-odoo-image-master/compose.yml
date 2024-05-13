@@ -1,0 +1,44 @@
+version: '2'
+services:
+  web:
+    image: my-odoo-image:latest
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+   
+    volumes:
+      - ./odoo-data:/var/lib/odoo
+      - ./odoo-data/config:/etc/odoo
+      - ./custom_addons:/mnt/extra-addons
+      
+    networks:
+      - webnet
+  
+  db:
+    image: postgres:10
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - ./odoo-data/db_data:/var/lib/postgresql/data
+
+    networks:
+      - webnet
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./ngnix/ngnix.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8080:8080"
+    depends_on:
+      - web
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    

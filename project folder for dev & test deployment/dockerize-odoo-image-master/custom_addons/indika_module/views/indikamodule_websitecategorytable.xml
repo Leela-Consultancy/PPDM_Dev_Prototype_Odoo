@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <act_window
+        id="indikamodule_websitecategorytable_action"
+        name="Website Category"
+        res_model="indikamodule.websitecategorytable"
+    />
+
+    <menuitem
+        id="indikamodule_menu"
+        name="INDIKA Module"
+        sequence="0"
+    />
+     <menuitem id="indikamodule_websitecategorytable_menu"
+                  name="Websites Category" action="indikamodule_websitecategorytable_action"
+                  parent="indikamodule_menu" sequence="4"/>
+
+    <data>
+        <!-- Form View -->
+        <record id="indikamodule_websitecategorytable_view_form" model="ir.ui.view">
+            <field name="name">Website Category Data Form</field>
+            <field name="model">indikamodule.websitecategorytable</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <!-- Fields to display in the form -->
+                        <field name="category"/>
+                        <field name="strictly_necessary_cookies"/>
+                        <field name="performance_cookies"/>
+                        <field name="functionality_cookies"/>
+                        <field name="targeting_cookies"/>
+                        <field name="unknown_cookies"/>
+                        <field name="persistent_cookies"/>
+                        <field name="session_cookies"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="indikamodule_websitecategorytable_view_tree" model="ir.ui.view">
+            <field name="name">Website Category Data List</field>
+            <field name="model">indikamodule.websitecategorytable</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Fields to display in the tree view -->
+                        <field name="category"/>
+                        <field name="strictly_necessary_cookies"/>
+                        <field name="performance_cookies"/>
+                        <field name="functionality_cookies"/>
+                        <field name="targeting_cookies"/>
+                        <field name="unknown_cookies"/>
+                        <field name="persistent_cookies"/>
+                        <field name="session_cookies"/>
+                </tree>
+            </field>
+        </record>
+
+
+         <!-- Action -->
+        <record id="indikamodule_websitecategorytable_action" model="ir.actions.act_window">
+            <field name="name">Websites Category Data</field>
+            <field name="res_model">indikamodule.websitecategorytable</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Items -->
+        <menuitem id="indikamodule_menu" name="INDIKA Module" sequence="1"/>
+        <menuitem id="indikamodule_websitecategorytable_menu"
+                  name="Websites Category" action="indikamodule_websitecategorytable_action"
+                  parent="indikamodule_menu" sequence="4"/>
+    </data>
+</odoo>
+
+
