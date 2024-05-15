@@ -6,6 +6,40 @@ pr:
 - '*'
 
 stages:
+- stage: Build
+  displayName: 'Build Stage - Mac OS'
+  jobs:
+  - job: BuildAndPublishOdooModule
+    pool:
+      name: myagentpool  # Specify the Mac OS agent pool
+    steps:
+    - checkout: self
+    - task: CopyFiles@2
+      inputs:
+        sourceFolder: 'addons/indika_module'
+        contents: '**'
+        targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
+        ArtifactName: 'copiedindikamodule-artifact'
+        publishLocation: 'Container'
+    - task: DownloadBuildArtifacts@1
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'copiedindikamodule-artifact'
+        downloadPath: '$(System.ArtifactsDirectory)'
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Hello world
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo welcome to the Mac OS system
+          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/odoo/addons/indika_module/
+
 - stage: BuildWindows
   displayName: 'Build Stage - Windows'
   jobs:
@@ -41,6 +75,49 @@ stages:
           mkdir odoo
           xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
 
+- stage: BuildashwinMac
+  displayName: 'Build Stage - Ashwin Mac'
+  jobs:
+  - job: BuildAndPublishOdooModule
+    pool:
+      name: ashwinMacpool  # Specify the Mac OS agent pool
+    steps:
+    - checkout: self
+    - task: CopyFiles@2
+      inputs:
+        sourceFolder: 'addons/indika_module'
+        contents: '**'
+        targetFolder: '$(Build.ArtifactStagingDirectory)/indika_module'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/indika_module'
+        ArtifactName: 'copiedindikamodule-artifact'
+        publishLocation: 'Container'
+    - task: DownloadBuildArtifacts@1
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'copiedindikamodule-artifact'
+        downloadPath: '$(System.ArtifactsDirectory)'
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Hello world
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo welcome to the Mac OS system
+          pwd
+          echo $HOME
+          cd $Home
+          pwd
+          cd odoo
+          pwd
+          cd addons
+          pwd
+          mkdir indika_module
+          pwd
+          cp -r $(System.ArtifactsDirectory)/copiedindikamodule-artifact/* $HOME/odoo/addons/indika_module/
 
 
       
