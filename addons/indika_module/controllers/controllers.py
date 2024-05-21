@@ -23,7 +23,53 @@ class PPDMWebsite(http.Controller):
                 'total_websites': total_websites
             })
 
+    @http.route('/indika/paginate', auth='public', type='json', website=True)
+    def paginate(self, search='', page=1, page_size=10, **kw):
+        offset = (page - 1) * page_size
+        # Website = http.request.env['indikamodule.websitestable']
+        #
+        # websites = Website.search(
+        #     [('name', 'ilike', search)], limit=page_size, offset=offset
+        # )
+        # total_websites = Website.search_count(
+        #     [('name', 'ilike', search)]
+        # )
+        #
+        # if websites:
+        #     return {
+        #         'draw': kw.get('draw', 1),
+        #         'recordsTotal': total_websites,
+        #         'recordsFiltered': total_websites,
+        #         'data': websites.read(['id', 'name', 'url'])
+        #     }
+        # else:
+        #     return {
+        #         'draw': kw.get('draw', 1),
+        #         'recordsTotal': 0,
+        #         'recordsFiltered': 0,
+        #         'data': []
+        #     }
 
+    @http.route('/indika/paginate', type='json', auth='public', methods=['POST'], website=True)
+    def paginate(self, **kw):
+        search_value = kw.get('search[value]', '')
+        start = int(kw.get('start', 0))
+        length = int(kw.get('length', 10))
+
+        Website = http.request.env['indikamodule.websitestable']
+
+        domain = [('name', 'ilike', f'%{search_value}%')]
+        total_websites = Website.search_count(domain)
+        websites = Website.search(domain, limit=length, offset=start)
+
+        data = websites.read(['name', 'url'])
+
+        return {
+            'draw': int(kw.get('draw', 1)),
+            'recordsTotal': total_websites,
+            'recordsFiltered': total_websites,
+            'data': data
+        }
 
     @http.route('/indika/website_details/<model("indikamodule.websitestable"):website>/', auth='public', website=True)
     def website_details(self, website):
