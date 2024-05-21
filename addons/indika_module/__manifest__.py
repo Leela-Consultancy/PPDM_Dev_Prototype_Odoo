@@ -1,5 +1,5 @@
 {
-	'name': 'indika_module',
+	'name': 'INDIKA Module',
     'summary' : "Privacy Policy Data Metrics",
 	'description' : """Application Details""",
 	'author' : "Leela Consultancy",
