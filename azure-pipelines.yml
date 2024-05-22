@@ -40,3 +40,4 @@ stages:
           echo welcome to the Windows system
           mkdir odoo
           xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\odoo\odoo\addons\indika_module\
+          xcopy /E /Y $(System.ArtifactsDirectory)\copiedindikamodule-artifact\* %HOMEPATH%\dockerdemocustommodule\dockerize-odoo-image-master\project\custom_addons\indika_module\
