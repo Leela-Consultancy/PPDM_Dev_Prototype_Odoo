@@ -5,12 +5,6 @@ id="indikamodule_userstable_action"
 name="Users Data"
 res_model="indikamodule.userstable" />
 
-<menuitem
- id="indikamodule_userstable_menu"
- name="User data"
- action="indikamodule_userstable_action"
-
- sequence="5" />
 
 <!--     parent="indikamodule_websitestable_menu"-->
 <record id ="indikamodule_userstable_view_form" model="ir.ui.view">

@@ -11,9 +11,7 @@
         name="INDIKA Module"
         sequence="0"
     />
-     <menuitem id="indikamodule_websitecategorytable_menu"
-                  name="Websites Category" action="indikamodule_websitecategorytable_action"
-                  parent="indikamodule_menu" sequence="4"/>
+    
 
     <data>
         <!-- Form View -->

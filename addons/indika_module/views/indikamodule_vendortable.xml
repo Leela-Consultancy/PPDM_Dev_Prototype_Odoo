@@ -12,13 +12,7 @@
         sequence="0"
     />
 
-    <menuitem
-        id="indikamodule_vendortable_menu"
-        name="Vendors Sites"
-        parent="indikamodule_menu"
-        sequence="2"
-        action="indikamodule_vendortable_action"
-    />
+  
     <data>
         <!-- Form View -->
         <record id="indikamodule_vendortable_view_form" model="ir.ui.view">

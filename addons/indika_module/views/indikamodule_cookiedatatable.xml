@@ -5,11 +5,7 @@ id="indikamodule_cookiedatatable_action"
 name="Cookie Data"
 res_model="indikamodule.cookiedatatable" />
 
-<menuitem
- id="indikamodule_cookiedatatable_menu"
- name="Cookie Data"
- action="indikamodule_cookiedatatable_action"
- sequence="5" />
+
 <!-- parent="indikamodule_websitestable_menu"-->
 <record id ="indikamodule_cookiedatatable_view_form" model="ir.ui.view">
    <field name="name">Cookie Data Form</field>
